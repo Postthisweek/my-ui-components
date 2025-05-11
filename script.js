@@ -1344,46 +1344,64 @@ function updateResults(filteredItems) {
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            createScreenReaderOnlyStyles();
-            
-            const spinnerContainer = document.querySelector('.spinner-container');
-            const loadButton = document.getElementById('loadButton');
-            
-            loadButton.addEventListener('click', function() {
-                // Show spinner
-                spinnerContainer.setAttribute('aria-hidden', 'false');
-                spinnerContainer.classList.add('active');
-                
-                // Simulate async operation
-                setTimeout(function() {
-                    // Hide spinner
-                    spinnerContainer.setAttribute('aria-hidden', 'true');
-                    spinnerContainer.classList.remove('active');
-                }, 3000);
-            });
-            
-            // Ensure focus isn't trapped in spinner
-            spinnerContainer.addEventListener('keydown', function(e) {
-                if (e.key === 'Tab' && spinnerContainer.classList.contains('active')) {
-                    e.preventDefault();
-                    loadButton.focus();
-                }
-            });
+        function showSpinner() {
+    const spinner = document.querySelector('.spinner-container');
+    if (spinner) {
+        spinner.classList.add('active');
+        // Announce loading to screen readers
+        const announcement = document.getElementById('loading-spinner-announcement');
+        if (announcement) {
+            announcement.textContent = 'Content is loading, please wait...';
+        }
+    }
+}
+
+function hideSpinner() {
+    const spinner = document.querySelector('.spinner-container');
+    if (spinner) {
+        spinner.classList.remove('active');
+        // Clear loading announcement
+        const announcement = document.getElementById('loading-spinner-announcement');
+        if (announcement) {
+            announcement.textContent = '';
+        }
+    }
+}
+
+// Example usage with your content loading
+function showContent(event, componentId) {
+    event.preventDefault();
+    
+    // Show spinner
+    showSpinner();
+    
+    // Hide current content
+    document.querySelectorAll('.component-content, #default-content').forEach(content => {
+        content.style.display = 'none';
+    });
+
+    // Simulate loading delay (remove this in production)
+    setTimeout(() => {
+        // Show new content
+        const content = document.getElementById(componentId);
+        if (content) {
+            content.style.display = 'block';
+            content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Update active link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
         });
+        event.currentTarget.classList.add('active');
+        
+        // Hide spinner
+        hideSpinner();
+    }, 800); // Adjust this timeout as needed
+}
 
-           document.addEventListener("DOMContentLoaded", function () {
-    const announcementRegion = document.getElementById("loading-spinner-announcement");
-
-    // Announce loading state
-
-    setTimeout(() => {
-    announcementRegion.textContent = "Loading content, please wait...";
-}, 100); // Small delay to ensure Narrator detects the update    
-
-    // Simulate loading delay (Replace with actual data fetching logic)
-    setTimeout(() => {
-        // Announce loading completion
-        announcementRegion.textContent = "Loading complete. Content is now available.";
-    }, 3000);  // Adjust timing as needed
+// Add event listener for your demo button
+document.getElementById('loadButton')?.addEventListener('click', function() {
+    showSpinner();
+    setTimeout(hideSpinner, 2000); // Hide after 2 seconds for demo
 });
