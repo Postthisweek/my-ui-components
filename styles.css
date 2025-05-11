@@ -130,9 +130,9 @@ body {
             background: rgba(255,255,255,0.1);
         }
 
-        .nav-link.active {
-            background: var(--primary-color);
-            font-weight: 500;
+        .nav-link.active {           
+    background-color: #4361ee;
+    color: white;
         }
 
         .nav-link i {
