@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Components Library</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
 </head>
 <body>
     <!-- Sticky Navigation -->
@@ -15,30 +15,32 @@
         <ul class="nav-menu">
             <li class="nav-item">
                 <h3>Form Elements</h3>
-            </li>
+            </li>            
+            
             <li class="nav-item">
-                <a href="#" class="nav-link active" onclick="showContent(event, 'buttons')">
-                    <i class="fas fa-square"></i> Buttons
-                </a>
-            </li>
+            <a href="#" class="nav-link active" onclick="showContent(event, 'buttons')">
+                <i class="fas fa-square"></i> Buttons
+            </a>
+        </li>
+
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event, 'checkboxes')">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'checkboxes')">
                     <i class="fas fa-check-square"></i> Checkboxes
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event, 'radio-buttons')">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'radio-buttons')">
                     <i class="fas fa-dot-circle"></i> Radio Buttons
                 </a>
             </li>
 
-            <a href="#" class="nav-link" onclick="showContent(event,'date-picker')">
+            <a href="#" class="nav-link active" onclick="showContent(event,'date-picker')">
                 <i class="fas fa-calendar-alt"></i> Date Picker
             </a>
-            <a href="#" class="nav-link" onclick="showContent(event,'search-input')">
+            <a href="#" class="nav-link active" onclick="showContent(event,'search-input')">
                 <i class="fas fa-search"></i> Search Input
             </a>
-            <a href="#" class="nav-link" onclick="showContent(event,'character-count')">
+            <a href="#" class="nav-link active" onclick="showContent(event,'character-count')">
                 <i class="fas fa-text-height"></i> Character Count
             </a>
             
@@ -46,24 +48,24 @@
                 <h3>Feedback Elements</h3>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event, 'alerts')">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'alerts')">
                     <i class="fas fa-exclamation-circle"></i> Alerts
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event, 'notification')">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'notification')">
                     <i class="fas fa-bell"></i> Notification
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event, 'error-message-summary')">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'error-message-summary')">
                     <i class="fa-solid fa-triangle-exclamation"></i> Error Message and Summary
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'status-message')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'status-message')">
                     <i class="fa-regular fa-message"></i> Status Messages
                 </a>    
             </li>
@@ -72,49 +74,49 @@
                 <h3>Navigation & Organization</h3>
             </li>            
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'accordion')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'accordion')">
                     <i class="fas fa-bars"></i> Accordions
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'tabs')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'tabs')">
                     <i class="fas fa-folder"></i> Tabs
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'modal-dialog')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'modal-dialog')">
                     <i class="fas fa-window-restore"></i> Modal Dialog
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'progress-wizard')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'progress-wizard')">
                     <i class="fas fa-spinner"></i> Progress Wizard
                 </a>
             </li>            
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'page-navigation')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'page-navigation')">
                     <i class="fas fa-ellipsis-h"></i> Pagination
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'breadcrumb')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'breadcrumb')">
                     <i class="fas fa-map-signs"></i> Breadcrumb 
                 </a>    
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'filters')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'filters')">
                     <i class="fas fa-filter"></i> Filters
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'sort')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'sort')">
                     <i class="fas fa-sort"></i> Sort                    
                 </a>
             </li>
@@ -124,25 +126,25 @@
             </li> 
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'layouts')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'layouts')">
                     <i class="fas fa-th"></i> Grid, Table, Headings & Paragraphs
                 </a>
             </li>                     
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'tags')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'tags')">
                     <i class="fas fa-tags"></i> Tags
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'timeline')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'timeline')">
                     <i class="fas fa-clock"></i> Timeline
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" onclick="showContent(event,'loading-spinner')">
+                <a href="#" class="nav-link active" onclick="showContent(event,'loading-spinner')">
                     <i class="fas fa-circle-notch"></i> Loading Spinner
                 </a>
             </li>
@@ -1804,12 +1806,13 @@
             <p>Display loading spinner to users</p>
         </div>
         <div class="component-preview">    
-    <!-- ARIA Live Region for announcements -->
+    
+         <!-- Loading Spinner -->
 <div id="loading-spinner-announcement" role="alert" aria-atomic="true" class="sr-only"></div>             
-        <button class="spin-button" id="loadButton">Simulate Loading</button>
+        <button id="loadButton" class="spin-button">Simulate Loading</button>
         <p>Press the button to see an accessible loading spinner in action.</p>
-    </div>
-
+    </div> 
+        
     <div class="spinner-container" role="status" aria-live="polite" aria-hidden="true">
         <div class="spinner" aria-hidden="true"></div>
         <span class="sr-only">Loading content, please wait...</span>
@@ -1854,11 +1857,10 @@
     </div>
 </div>
     </div>
-    </div>
+    
             
         <!-- Add more component content sections as needed -->
     
-    </main>    
-
+    </main>        
 </body>
 </html>
