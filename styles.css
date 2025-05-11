@@ -2092,6 +2092,7 @@ hr {
             border-top: 5px solid #3498db;
             border-radius: 50%;
             animation: spin 1s linear infinite;
+            transition: transform 0.2s ease-out; /* Smoother spin appearance */
         }
 
         /* Reduced motion preference */
