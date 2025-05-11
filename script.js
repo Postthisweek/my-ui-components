@@ -1,36 +1,59 @@
-// Show the selected component content
-        function showContent(event, target) {
-    event.preventDefault(); // Prevent full page reload
-    window.location.hash = target; // Change URL without navigating away
-    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
-}
-        function showContent(event, componentId) {
-            // Hide all component contents
-            document.querySelectorAll('.component-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            // Hide default content
-            document.getElementById('default-content').style.display = 'none';
-            
-            // Show selected component
-            document.getElementById(componentId).classList.add('active');
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-            
-            // Scroll to top of content
-            document.querySelector('.content').scrollTo(0, 0);
-        }
+function showContent(event, componentId) {
+    event.preventDefault(); // Prevent default link behavior
+    
+    // Update URL hash without page reload
+    history.replaceState(null, null, `#${componentId}`);
+    
+    // Hide all component contents and default content
+    document.querySelectorAll('.component-content, #default-content').forEach(content => {
+        content.classList.remove('active');
+        content.style.display = 'none';
+    });
+    
+    // Show selected component
+    const activeComponent = document.getElementById(componentId);
+    if (activeComponent) {
+        activeComponent.classList.add('active');
+        activeComponent.style.display = 'block';
         
-        // Initialize with buttons content shown
-        document.addEventListener('DOMContentLoaded', function() {
-            // If you want to show a specific component by default:
-            // showContent('buttons');
+        // Smooth scroll to component
+        activeComponent.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
         });
+    }
+    
+    // Update active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide all component contents initially
+    document.querySelectorAll('.component-content').forEach(content => {
+        content.style.display = 'none';
+    });
+    
+    // Show default content or hash-based content
+    const hash = window.location.hash.substring(1);
+    const defaultComponent = hash || 'default-content';
+    
+    if (document.getElementById(defaultComponent)) {
+        // Simulate click on the corresponding nav link
+        const correspondingLink = document.querySelector(`.nav-link[onclick*="${defaultComponent}"]`);
+        if (correspondingLink) {
+            correspondingLink.click();
+        } else {
+            // Show default content if no matching component found
+            document.getElementById('default-content').style.display = 'block';
+        }
+    } else {
+        document.getElementById('default-content').style.display = 'block';
+    }
+});
         
 
         // Show notification function
