@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components Library</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>UI Components</h2>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <h3>Form Elements</h3>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active" onclick="showContent(event, 'buttons')">
+                    <i class="fas fa-square"></i> Buttons
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event, 'checkboxes')">
+                    <i class="fas fa-check-square"></i> Checkboxes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event, 'radio-buttons')">
+                    <i class="fas fa-dot-circle"></i> Radio Buttons
+                </a>
+            </li>
+
+            <a href="#" class="nav-link" onclick="showContent(event,'date-picker')">
+                <i class="fas fa-calendar-alt"></i> Date Picker
+            </a>
+            <a href="#" class="nav-link" onclick="showContent(event,'search-input')">
+                <i class="fas fa-search"></i> Search Input
+            </a>
+            <a href="#" class="nav-link" onclick="showContent(event,'character-count')">
+                <i class="fas fa-text-height"></i> Character Count
+            </a>
+            
+            <li class="nav-item">
+                <h3>Feedback Elements</h3>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event, 'alerts')">
+                    <i class="fas fa-exclamation-circle"></i> Alerts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event, 'notification')">
+                    <i class="fas fa-bell"></i> Notification
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event, 'error-message-summary')">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Error Message and Summary
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'status-message')">
+                    <i class="fa-regular fa-message"></i> Status Messages
+                </a>    
+            </li>
+            
+            <li class="nav-item">
+                <h3>Navigation & Organization</h3>
+            </li>            
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'accordion')">
+                    <i class="fas fa-bars"></i> Accordions
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'tabs')">
+                    <i class="fas fa-folder"></i> Tabs
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'modal-dialog')">
+                    <i class="fas fa-window-restore"></i> Modal Dialog
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'progress-wizard')">
+                    <i class="fas fa-spinner"></i> Progress Wizard
+                </a>
+            </li>            
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'page-navigation')">
+                    <i class="fas fa-ellipsis-h"></i> Pagination
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'breadcrumb')">
+                    <i class="fas fa-map-signs"></i> Breadcrumb 
+                </a>    
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'filters')">
+                    <i class="fas fa-filter"></i> Filters
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'sort')">
+                    <i class="fas fa-sort"></i> Sort                    
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <h3>Structural & Logical Elements</h3>
+            </li> 
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'layouts')">
+                    <i class="fas fa-th"></i> Grid, Table, Headings & Paragraphs
+                </a>
+            </li>                     
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'tags')">
+                    <i class="fas fa-tags"></i> Tags
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'timeline')">
+                    <i class="fas fa-clock"></i> Timeline
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="showContent(event,'loading-spinner')">
+                    <i class="fas fa-circle-notch"></i> Loading Spinner
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="content">
+        <!-- Default content (visible when no component selected) -->
+        <div id="default-content">
+            <div class="content-header">
+                <h2>UI Components Library</h2>
+                <p>A collection of reusable UI components with consistent design patterns</p>
+            </div>
+            <p>Design components, patterns, and styles form the backbone of user interfaces, shaping how users interact with digital products. Collectively, these elements ensure predictability and usability, reinforcing a cohesive experience across platforms.</p>
+            <p>Their inevitability lies in their universal necessity—every interface, no matter its complexity, relies on these foundational structures to support engagement, accessibility, and ease of use.</p>
+            <p>Select a component from the sidebar to view details, examples, and implementation guidelines.</p>
+        </div>
+
+        <!-- Buttons Component -->
+        <div id="buttons" class="component-content">
+            <div class="content-header">
+                <h2>Buttons</h2>
+                <p>Interactive elements that trigger actions or events</p>
+            </div>
+            
+            <div class="component-preview">
+                <h3>Examples</h3>
+                <!-- Primary Button-->
+                <button class="btn">Primary Button</button>
+                <!-- Secondary Button -->
+                <button class="btn" style="background: #6c757d;">Secondary</button>
+                <!-- Danger Button -->
+                <button class="btn" style="background: #dc3545;">Danger</button>
+                <!-- Outline Button -->
+                <button class="btn" style="background: transparent; color: #4361ee; border: 1px solid #4361ee;">Outline</button>
+                <!-- Standard Text-Only Button -->
+                <button class="btn text-btn" style="background: #fff; color: black;">Text Only Button</button>
+               <!-- Icon Button -->
+                <button class="btn icon-btn" style="background: #dedddf; color: black;">                    
+                <span class="icon">🔍</span> Search
+                </button>
+                <!-- Disabled Button -->
+                <button class="btn disabled-btn" disabled>Disabled Button</button>
+                <!-- Interactive Button -->
+                <button class="btn interactive-btn" id="alertBtn" style="background: purple;">Click Me</button>
+
+            </div>
+            
+            <div class="component-code">
+
+                <h3>Best Practices for Accessible Buttons</h3>
+                <h4>Primary Buttons</h4>
+                <p>Primary buttons are the main call-to-action on a page. They should be visually distinct and easy to identify.</p>
+                <ul>
+                    <li>Use for the main action on a page (e.g., "Submit", "Save", "Continue")</li>
+                    <li>Limit to one primary button per section to avoid confusion</li>
+                    <li>Avoid overuse, if everything is a primary button, users may struggle to find the main action</li>                   
+                    
+                </ul>
+                <h4>Secondary Buttons</h4>
+                <p>Secondary buttons are used for less important actions. They should be visually distinct but not overpowering.</p>
+                <ul>
+                    <li>Use secondary buttons for actions that are not the primary focus</li>
+                    <li>Use for actions that are important but not the main focus (e.g., "Cancel", "Back")</li>
+                    <li>Ensure they are visually distinct from primary buttons</li>
+                    <li>Should be visually distinct but not overpowering</li>                    
+                </ul>
+                <h4>Danger Buttons</h4>
+                <p>Danger buttons are used for actions that may have negative consequences. They should be visually distinct and clearly labeled.</p>
+                <ul>
+                    <li>Use danger buttons for actions that may have negative consequences (e.g., "Delete", "Remove")</li>
+                    <li>Ensure they are visually distinct from primary and secondary buttons</li>
+                    <li>Use for actions that may have negative consequences (e.g., "Delete", "Remove")</li>                    
+                </ul>
+                <h4>Outline Buttons</h4>
+                <p>Outline buttons are used for actions that are less important than primary buttons. They should be visually distinct but not overpowering.</p>
+                <ul>
+                    <li>Use outline buttons for actions that are less important than primary buttons</li>
+                    <li>Ensure they are visually distinct from primary and secondary buttons</li>
+                    <li>Avoid using outline buttons in low-contrast themes or without proper padding—they may become hard to perceive</li>                    
+                </ul>
+                <h4>Text-Only Buttons</h4>
+                <p>Text-only buttons are used for actions that are less important than primary buttons. They should be visually distinct but not overpowering.</p>
+                <ul>
+                    <li>Use text-only buttons for actions that are less important than primary buttons</li>
+                    <li>Ensure they are visually distinct from primary and secondary buttons</li>
+                    <li>Used for subtle actions where a button-like appearance isn’t necessary (e.g., "Learn More")</li>
+                    <li>Often found in links that act like buttons but don’t require emphasis</li>
+                    <li>Useful in minimalist designs that reduce UI clutter</li>
+                    <li>Should not be used for critical actions like "Submit" or "Delete", these need more visibility</li>
+                </ul>
+                <h4>Icon Buttons</h4>
+                <p>Icon buttons are used for actions that are less important than primary buttons. They should be visually distinct but not overpowering.</p>
+                <ul>
+                    <li>Used for quick actions, such as search (🔍), settings (⚙️), or closing (❌)</li>
+                    <li>Often used in mobile interfaces where space is limited</li>
+                    <li>Use for actions that can be represented by an icon (e.g., "Search", "Settings")</li>
+                    <li>Should have a clear label or tooltip to describe the action</li>
+                    <li>Ensure they are large enough to be easily clickable</li>
+                    <li>Use consistent styling across all icon buttons</li>
+                    <li>Beneficial for users who recognize visual symbols faster than text-based buttons</li>
+                    <li>Needs adequate spacing for touch users (especially those with motor impairments)</li>
+                </ul>
+                <h4>Disabled Buttons</h4>
+                <p>Disabled buttons are used for actions that are not currently available. They should be visually distinct and clearly labeled.</p>
+                <ul>
+                    <li>Use disabled buttons for actions that are not currently available</li>
+                    <li>Ensure they are visually distinct from enabled buttons</li>
+                    <li>Use for actions that are not currently available (e.g., "Submit" when a form is incomplete)</li>
+                    <li>Should be visually distinct and clearly labeled</li>
+                    <li>Ensure they are visually distinct from enabled buttons</li>
+                    <li>Use a lighter color or a different style to indicate the disabled state</li>
+                    <li>Provide a tooltip or message explaining why the button is disabled</li>
+                </ul>
+                <h4>Interactive Buttons</h4>
+                <p>Interactive buttons are used for actions that require user interaction. They should be visually distinct and clearly labeled.</p>
+                <ul>
+                    <li>Use interactive buttons for actions that require user interaction</li>
+                    <li>Ensure they are visually distinct from other elements</li>
+                    <li>Avoid overcomplexity, if the action is essential, ensure users can predict the button's behaviour</li>
+                    <li>Used for actions that trigger a change (e.g., opening modals, toggling a feature, dynamic events)</li>
+                    <li>Found in interactive elements, such as expanding sections or triggering alerts</li>
+                    <li>Essential for user-driven experiences that respond to input beyond navigation</li>
+                </ul>
+                <h4>Best Practices for All Buttons</h4>
+                <p>Regardless of the button type, here are some best practices to follow:</p>
+                <ul>
+                    <li>Use clear and concise text that describes the action</li>
+                    <li>Ensure buttons are large enough to be easily clickable</li>
+                    <li>Use consistent styling across all buttons</li>
+                    <li>Provide visual feedback on hover and active states</li>
+                    <li>Use ARIA roles and properties to enhance accessibility</li>                    
+                    <li>Ensure the button is visually distinct from other elements</li>
+                    <li>Should have focus states and keyboard accessibility (Tab, Enter, Space)</li>
+                    <li>Provide high contrast, improving visibility for users with low vision</li>
+                </ul>               
+            </div>           
+         </div>
+
+        <!-- Checkboxes Component -->
+        <div id="checkboxes" class="component-content">
+            <div class="content-header">
+                <h2>Checkboxes</h2>
+                <p>Allow users to select one or multiple options from a set. Therefore, design accessible checkboxes ensures a smooth experience for users relying on assistive technologies, keyboard navigation, and various screen sizes. </p>
+            </div>
+            
+            <div class="component-preview">
+                <form>
+                <fieldset>
+                    <legend>Examples</legend>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <label><input type="checkbox"> Standard checkbox</label>
+                    <label><input type="checkbox" checked> Pre-selected</label>
+                    <label><input type="checkbox" disabled> Disabled</label>
+                </div>
+                </fieldset>
+            </form>
+            </div>            
+            
+        <div class="component-preview">
+            <form>
+           <fieldset>
+               <legend>Demo Form</legend>
+               <div class="checkbox-container">
+                   <input type="checkbox" id="demo1" class="checkbox-input" checked>
+                   <label for="demo1" class="checkbox-label">Interactive checkbox</label>
+               </div>
+               <div class="checkbox-container">
+                   <input type="checkbox" id="demo2" class="checkbox-input">
+                   <label for="demo2" class="checkbox-label">Another option</label>
+               </div>
+           </fieldset>
+       </form>
+   </div>
+
+   <div class="component-code">
+    <h3>Best Practices for Accessible Checkboxes</h3>
+    <ul>
+        <li>Label checkboxes clearly using <label for="checkboxID">Checkbox Label</label></li>
+        <li>Use input type="checkbox" to ensure built-in browser functionality.</li>
+        <li>Group related checkboxes using fieldsets and legends</li>
+        <li>Ensure sufficient color contrast between checkbox and label</li>
+        <li>Ensure that checkbox states are communicated properly (aria-live="polite" when dynamically updated)</li>
+        <li>Use ARIA roles and properties to enhance accessibility, for example Use aria-checked="true/false" for custom checkboxes</li>
+        <li>Users should be able to navigate checkboxes via the Tab key and Toggle using the Space key</li>
+        <li>Provide visual feedback on hover and active states</li>
+        <li>Use clear and concise text that describes the action</li>
+        <li>Make checkbox hit areas large enough for touch devices</li>
+        <li>Use checkboxes for binary choices (yes/no, true/false)</li>
+        <li>Use checkboxes for multiple selections from a list</li>
+        <li>Use checkboxes for options that can be toggled on/off</li>
+        <li>Use checkboxes for options that are not mutually exclusive</li>
+        <li>Use relative units (rem, %) instead of fixed pixels</li>
+    </ul>
+    
+</div>
+</div>
+
+        <!-- Radio Buttons Component -->         
+        <div id="radio-buttons" class="component-content">
+            <div class="content-header">
+                <h2>Radio Buttons</h2>
+                <p>Allow users to select exactly one option from a set. Therefore, design accessible radio buttons ensure a smooth experience for users relying on assistive technologies, keyboard navigation, and various screen sizes. </p>
+            </div>
+            
+            <div class="component-preview">
+                <h3>Standard Radio Group</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <fieldset>
+                        <legend>Shipping Method</legend>
+                        <div class="radio-options">
+                            <label class="radio-option">
+                                <input type="radio" name="shipping" value="standard" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">
+                                    Standard Shipping
+                                    <span class="radio-description">3-5 business days ($5.99)</span>
+                                </span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="shipping" value="express" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">
+                                    Express Shipping
+                                    <span class="radio-description">1-2 business days ($12.99)</span>
+                                </span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="shipping" value="pickup" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">
+                                    Store Pickup
+                                    <span class="radio-description">Ready in 1 hour (Free)</span>
+                                </span>
+                            </label>                            
+                        </div>
+                    </div>                    
+                    </fieldset>
+                </div>             
+                       
+            
+        <div class="component-preview">
+            <h3>Required Radio Group with Validation</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <form id="demoForm">
+                        <div class="radio-group" id="radioGroup2">
+                            <fieldset>
+                                <legend>Preferred Contact Method</legend>
+                                <div class="radio-options">
+                                    <label class="radio-option">
+                                        <input type="radio" name="contact" value="email" class="radio-input" required>
+                                        <span class="radio-custom" aria-hidden="true"></span>
+                                        <span class="radio-label">Email</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="contact" value="phone" class="radio-input" required>
+                                        <span class="radio-custom" aria-hidden="true"></span>
+                                        <span class="radio-label">Phone</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="contact" value="sms" class="radio-input" required>
+                                        <span class="radio-custom" aria-hidden="true"></span>
+                                        <span class="radio-label">Text Message</span>
+                                    </label>
+                                </div>
+                            </div>
+                            </fieldset>
+                            <div class="error-message">Please select a contact method</div>
+                        </div>
+                        <button class="btn" type="submit" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border: none; border-radius: 0.25rem; cursor: pointer;">Submit</button>
+                    </form>
+                </div>  
+
+                <div class="component-preview">                
+                    <h3>Experimental Radio Group</h3>
+                    <fieldset>
+                        <legend>Feedback Rating</legend>
+                        <div class="radio-options">
+                            <label class="radio-option">
+                                <input type="radio" name="rating" value="poor" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Poor</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="rating" value="fair" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Fair</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="rating" value="good" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Good</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="rating" value="excellent" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Excellent</span>
+                            </label>
+                        </div>                        
+                    </fieldset>
+                </div>                 
+
+                <div class="component-preview">
+                    <h3>Disabled Radio Group</h3>
+                    <fieldset disabled>
+                        <legend>Account Type</legend>
+                        <div class="radio-options" style="display: flex; gap: 1rem;">
+                            <label class="radio-option">
+                                <input type="radio" name="account" value="personal" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Personal</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="account" value="business" class="radio-input">
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Business</span>
+                            </label>                        
+                        </div>
+                     <div class="error-message">This option is disabled</div>                      
+                    </fieldset>
+                </div> 
+                
+                <div class="component-preview">
+                    <h3>Radio Group Horizontal</h3>
+                    <form id="demoForm">
+                        <div class="radio-group" id="radioGroup2">
+                    <fieldset class="error">
+                        <legend>Payment Method</legend>
+                        <div class="radio-options" style="display: flex; gap: 1rem;">
+                            <label class="radio-option">
+                                <input type="radio" name="payment" value="credit" class="radio-input" required>
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">Credit Card</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="payment" value="paypal" class="radio-input" required>
+                                <span class="radio-custom" aria-hidden="true"></span>
+                                <span class="radio-label">PayPal</span>
+                            </label>                        
+                        </div>                        
+                    </fieldset>
+                    </div>
+                <div class="error-message">Please select a payment method</div>
+                <button class="btn" type="submit" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border: none; border-radius: 0.25rem; cursor: pointer;">Submit</button>
+                    </form>
+                </div>    
+                
+                <div class="component-code">
+                    <h3>Best Practices for Accessible Radio Buttons</h3>
+                    <ul>
+                        <li>Semantic HTML: Use (input type="radio") with proper <label> associations</li>
+                        <li>Grouping: Wrap related radio buttons in (fieldset) with (legend)</li>
+                        <li>ARIA Attributes: Use aria-describedby for additional instructions when needed</li>
+                        <li>Keyboard Navigation: Ensure all radio buttons are focusable and operable with arrow keys</li>
+                        <li>Clear Selection States: Distinct styles for selected/unselected states</li>
+                        <li>Touch Targets: Minimum 44×44px touch target (WCAG 2.1)</li>
+                        <li>Visual Focus Indicators: Clear focus styles for keyboard navigation</li>
+                        <li>Color Contrast: Ensure sufficient contrast between text and background</li>
+                        <li>Label Clarity: Use clear and concise labels for each option</li>
+                        <li>Responsive Design: Ensure radio buttons are usable on all screen sizes</li>
+                        <li>Validation: Provide clear error messages for required fields</li>
+                        <li>Accessible Error Messages: Use aria-live regions for dynamic error messages</li>
+                        <li>Custom Radio Buttons: If using custom styles, ensure they are keyboard and screen reader accessible</li>
+                        <li>Spacing: Adequate spacing between options (at least 8px)</li>
+                        <li>Selection: Only one option selectable per group</li>
+                        <li>Layout: Vertical layout preferred, horizontal when space allows</li>
+                        <li>Instructions: Additional help text when necessary</li>
+                    </ul>
+                    <h4>No Pre-selection vs. Pre-selection Options</h4>
+                    <p>Radio buttons should not have a pre-selected option unless it is necessary for the user to make a choice. If a pre-selection is made, ensure that the user can easily change their selection.</p>
+                    <h5>No Pre-selection</h5>
+                    <p>When no option is pre-selected, users are required to make a choice before proceeding. This can be beneficial in scenarios where the user must actively engage with the content.</p>
+                    <ul>
+                        <li>Implied Endorsement: Pre-selecting an option can inadvertently suggest that this choice is the "default" or preferred option, potentially biasing the user's decision without them actively considering all the choices</li>
+                        <li>False Submissions: Users might quickly scan the form and submit it without realizing a radio button was already selected, leading to unintended data</li>
+                        <li>Clarity of Choice: Leaving all options unselected makes it clear that the user needs to make an active choice</li>
+                    </ul>
+                    <h5>Pre-selection</h5>
+                    <p>Pre-selecting an option can be useful in scenarios where a default choice is common or expected. However, it is essential to ensure that users are aware of the pre-selection and can easily change it if desired.</p>
+                    <ul>
+                        <li>Default Choice: In some cases, a default choice may be appropriate, such as when a specific option is the most commonly selected</li>
+                        <li>Guidance: Pre-selection can guide users toward a recommended action, especially in complex forms</li>
+                        <li>Clarity of Choice: Ensure that users are aware of the pre-selection and can easily change it if desired</li>
+                        <li>Accessibility: Ensure that the pre-selected option is clearly indicated and that users can easily change their selection</li>
+                    </ul>
+                </div> 
+            </div>
+        </div>                              
+               
+        <!-- Date Picker Component -->
+        <div id="date-picker" class="component-content">
+            <div class="content-header">
+                <h2>Date Picker</h2>
+                <p>Allows users to either enter date or select a date from a calendar interface</p>
+            </div>
+            
+            <div class="component-preview">
+                <h3>Examples</h3>                
+                <div class="date-picker">
+                <div style="position: relative; max-width: 300px; font-family: Arial, sans-serif;">
+                    
+                        <label for="date">Select a date:</label>
+                        <input type="date" id="date" name="date" aria-label="Date selection">
+                    
+                        <!-- Fallback for browsers that don't support `input[type=date]` -->
+                        <noscript>
+                            <p>Your browser does not support the native date picker. Please enter the date manually.</p>
+                            <label for="fallback-date">Enter date (DD-MM-YYYY):</label>
+                            <input type="text" id="fallback-date" name="fallback-date" pattern="\d{4}-\d{2}-\d{2}" placeholder="DD-YY-YYYY" aria-label="Manual date entry">
+                        </noscript>                   
+                     </div>
+                  </div>
+                </div>        
+                                                 
+         <div class="component-code">
+
+        <h3>Best Practices for Accessible Date Pickers</h3>
+            <ul>
+                <li>Use a native date input type when possible and provide built-in browser support for date selection and ensure it works well with keyboard navigation and screen readers without additional effort</li>
+                <li>Ensure sufficient color contrast between text and background</li>
+                <li>Provide clear labels for all elements</li>
+                <li>Ensure ARIA Compatibility for Custom Date Pickers: Apply aria-label or aria-labelledby to clearly describe the date input and use aria-live="polite" to announce changes dynamically</li>
+                <li>Provide visual feedback on focus and hover states</li>
+                <li>Keyboard & Navigation Support: Users should be able to open the date picker via Enter or Space, navigate using arrow keys, and confirm selection using Enter</li>
+                <li>Responsive & Scalable Design: Make touch targets large enough for mobile use, and use relative sizing (rem, %) for adaptability</li>
+                <li>Localization: Support multiple date formats and languages, allowing users to select their preferred format</li>
+                <li>Validation & Error Handling: Provide clear error messages for invalid dates and ensure users can easily correct mistakes</li>
+                <li>Fallback for Non-Supporting Browsers: Provide a fallback input field for browsers that do not support the date input type</li>
+                <li>Testing: Regularly test with various screen readers and browsers to ensure consistent behavior</li>
+                <li>Flexible Date Selection: Offer both manual entry and calendar selection and provide range selection when needed</li>
+            </ul>              
+         </div>
+        </div>                 
+        
+        
+        <!-- Search Input Component -->
+    <div id="search-input" class="component-content">
+        <div class="content-header">
+            <h2>Search Input</h2>
+            <p>Allows users to search for content within the application.</p>
+        </div>
+        <div class="component-preview">
+            <h3>Search Input with Validation</h3>
+            <div class="search-input">
+                <form style="max-width: 300px; font-family: Arial, sans-serif;">
+                    <label for="search">Search the site:</label>
+                    <input type="search" id="search" name="search" 
+                        aria-describedby="search-instructions search-error" 
+                        placeholder="Type your query">
+                    <button class="btn" type="submit">Search</button>                    
+                    <p id="search-instructions">Type in your search query and press Enter or click the Search button.</p>
+                    <div id="search-error" class="error-message" aria-live="polite">
+                        Please enter a valid search term.
+                    </div>
+                </form>
+                <noscript>
+                    <p>Your browser does not support the search input field. Please enter text manually.</p>
+                    <label for="fallback-search">Enter search query:</label>
+                    <input type="text" id="fallback-search" name="fallback-search">
+                </noscript>                
+            </div>
+
+        <div class="component-code">
+        <h3>Best Practices for Search Input</h3>
+        <p>Search inputs are essential for users to find content quickly. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use a native search input type when possible and provide built-in browser support.</li>
+        <li>Ensure sufficient color contrast between text and background.</li>
+        <li>Provide clear labels for all elements.</li>
+        <li>Ensure ARIA Compatibility: Apply `aria-label` or `aria-labelledby` to describe the search input.</li>
+        <li>Use `aria-live="polite"` to announce dynamic changes.</li>
+        <li>Provide visual feedback on focus and hover states.</li>
+        <li>Ensure full keyboard accessibility, supporting Enter and arrow key navigation.</li>
+        <li>Make touch targets large enough for mobile users with relative sizing.</li>
+        <li>Support multiple languages for accessibility.</li>
+        <li>Provide validation with clear error messages for invalid searches.</li>
+        <li>Include fallback input fields for browsers that don’t support search input type.</li>
+        <li>Conduct regular testing with screen readers and various browsers.</li>
+    </ul>
+</div>
+</div>
+</div>    
+
+        <!-- Character Count Component -->
+      <div id="character-count" class="component-content">
+        <div class="content-header">
+          <h2>Character Count</h2>
+          <p>Display the number of characters remaining in a text input field</p>
+        </div>
+        <div class="component-preview">
+          <h3>Character Count with Validation</h3>
+          <div style="position: relative; max-width: 300px; font-family: Arial, sans-serif;">
+            <label for="userInput">Enter text (max 100 chars):</label> 
+            <textarea id="userInput" aria-describedby="character-count-message" maxlength="100"></textarea>
+            <p id="character-count" aria-live="polite">100 characters remaining</p>
+          </div>
+          <div class="error-message">
+            Character limit exceeded
+          </div>
+
+        <!-- Best Practices for Character Count -->
+<div class="component-code">
+    <h3>Best Practices for Character Count</h3>
+    <ul>
+        <li>Use a native text area input when possible</li>
+        <li>Ensure sufficient color contrast for readability</li>
+        <li>Provide clear labels for all elements</li>
+        <li>Apply ARIA attributes to describe the input area</li>
+        <li>Use `aria-live="polite"` for dynamic feedback when characters are added</li>
+        <li>Provide visual feedback on focus and hover states</li>
+        <li>Ensure full keyboard accessibility, including Enter and arrow key navigation</li>
+        <li>Use relative sizing (`rem`, `%`) for responsive design</li>
+        <li>Allow localization support for different languages</li>
+        <li>Ensure validation with clear error messaging when users exceed the character limit</li>
+        <li>Offer fallback for browsers that don’t support textarea input type</li>
+        <li>Perform accessibility testing across browsers and screen readers</li>
+    </ul>
+</div>
+</div>
+</div>
+</div>      
+
+        <!-- Alerts Component -->
+      <div id="alerts" class="component-content">
+        <div class="content-header">
+          <h1>Alerts</h1>
+          <p>Display important messages to users</p>
+        </div>
+        <div class="component-preview">
+          <h3>Alert with Validation</h3>
+          <div style="background: #d1e7dd; color: #0f5132; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+            Success alert message
+          </div>
+          <div style="background: #f8d7da; color: #842029; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+            Error alert message
+          </div>
+          <div style="background: #fff3cd; color: #664d03; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+            Warning alert message
+          </div>
+          <div style="background: #cfe2ff; color: #024d7e; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+            Info alert message
+          </div>
+          <div style="background: #f0f0f0; color: #000; padding: 1rem; border-radius: var(--border-radius); margin-bottom: 1rem;">
+            Neutral alert message
+          </div>
+
+        <!-- Best Practices for Alerts -->
+<div class="component-code">
+    <h3>Best Practices for Alerts</h3>
+    <ul>
+        <li>Use ARIA Roles & Attributes: role="alert" for assertive, immediate notifications (live updates); use role="status" for polite notifications that do not interrupt users and use aria-live="polite" or aria-live="assertive" to control how assistive technologies announce changes</li>
+        <li>Ensure Keyboard Accessibility: Allow users to dismiss alerts using the Esc key; ensure focus management (e.g., send focus to the alert when triggered) and provide logical tab order and aria-describedby for clarity</li>
+        <li>Responsive & Scalable Design: Use relative units (em, %, rem) instead of fixed pixels and implement flexbox or grid for adaptable layouts and consider contrast ratios for readability</li>        
+    </ul>
+        <h4>Alert New Ideas & Theoretical Innovations</h4>
+        <p>Explore new ideas and theoretical innovations in alert design:</p>
+        <ul>
+            <li>Context-Aware Alerts: Alerts that adapt based on user preferences (e.g., quieter alerts for neurodivergent users, priority-based notifications for assistive tech)</li>
+            <li>Delayed Processing Alerts: Alerts that wait for a cognitive pause before appearing, reducing overwhelm for users with cognitive disabilities</li>
+            <li>Motion-Based Alerts: Use prefers-reduced-motion to detect user preferences and reduce unnecessary animations while still conveying urgency</li>
+            <li>Multi-Sensory Alerts: Incorporate sound cues or haptic feedback (for touch interfaces) alongside visual alerts for enhanced accessibility</li>
+            <li>Dynamic Contextual Alerts: Alerts that change based on user context (e.g., location, time of day) to provide relevant information</li>
+        </ul>
+</div>
+</div>
+</div>
+</div>     
+
+ <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+      <div id="notification" class="component-content">
+        <div class="content-header">
+          <h2>Advanced Notification System</h2>
+          <p>Display important messages to users</p>
+        </div>
+        <div class="component-preview">            
+            <h3>Standard Notifications</h3>
+            <button class="notification-show" onclick="showNotification('info', 'Information', 'This is an informational notification.')">Show Info</button>
+            <button class="btn-success" onclick="showNotification('success', 'Success!', 'Your action was completed successfully.')">Show Success</button>
+            <button class="btn-warning" onclick="showNotification('warning', 'Warning', 'This action requires your attention.')">Show Warning</button>
+            <button class="btn-error" onclick="showNotification('error', 'Error!', 'Something went wrong. Please try again.')">Show Error</button>
+        </div>
+            <div class="component-preview">                
+            <h2>Actionable Notifications</h2>
+            <button class="notification-act" onclick="showActionableNotification()">Show with Actions</button>
+            <button class="notification-persistent" onclick="showPersistentNotification()">Show Persistent</button>
+        </div>
+
+        <div class="component-preview">
+            <h2>Notification Settings</h2>
+            <div class="settings">
+                <div class="settings-group">
+                    <label for="duration">Auto-dismiss duration: <span id="durationValue">5</span> seconds</label>
+                    <input type="range" id="duration" min="1" max="15" value="5" oninput="document.getElementById('durationValue').textContent = this.value">
+                </div>
+                <div class="settings-group">
+                    <label>
+                        <input type="checkbox" id="enableAnimations" checked> Enable animations
+                    </label>
+                </div>
+                <div class="settings-group">
+                    <label>
+                        <input type="checkbox" id="enableProgress" checked> Show progress bar
+                    </label>
+                </div>
+            </div>
+
+            <!-- Best Practices for Notifications -->
+<div class="component-code">
+    <h3>Best Practices for Notifications</h3>
+    <p>Notifications are essential for keeping users informed. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>ARIA Live Regions: Use aria-live="polite" for non-critical notifications and aria-live="assertive" for urgent ones; use role attributes: role="alert" for error messages, role="status" for general updates</li>
+        <li>Keyboard Navigation: Ensure notifications can be dismissed with keyboard (usually Escape key), ensure focus management by moving focus to new critical notifications but provide a way to return to previous location</li>
+        <li>Colour Contrast: Minimum 4.5:1 for text against background (WCAG AA), ensure multiple indicators: combine colour with icons and text for universal understanding</li>
+        <li>Responsive Layouts: Stack notifications vertically on mobile, consider position (top-right on desktop, bottom on mobile)</li>  
+        <li>Timing: Persistent for important notices, auto-dismiss after 5-8 seconds for others; ensure grouping: Bundle similar notifications to avoid overload, and enable persistence: critical notifications should remain until manually dismissed</li>
+        <li>Clear Language: Concise, actionable text; maintain priority levels: visual distinction between info, success, warning, and error. Include relevant buttons (e.g., "Undo", "View", "Dismiss")</li>      
+    </ul>
+        <h4>Notification New Ideas & Theoretical Innovations</h4>
+        <p>Explore new ideas and theoretical innovations in notification design:</p>
+        <ul>
+            <li>Adaptive Notification System, for example, context-aware prioritization, like notifications adjusting based on current user activity. Then, machine learning understanding and selecting which notifications users typically engage with or dismiss. Biometric integration: Adjusts based on detected stress levels (future concept)</li>
+            <li>Three-dimensional Notification Space, for example, Z-axis layering where more important notifications appear "closer" to the user with subtle 3D effects. Spatial audio cues ensures that different notification types have distinct spatialized sounds</li>
+            <li>Ephemeral Notification Stream, for example, timeline view where all notifications appear in a chronological stream that can be scrubbed through, and ambient mode, where notifications fade into the background when not actively viewed</li>
+            <li>Collaborative Filtering, for example, community-based importance, like notifications marked important by similar users get higher priority. Also, team notification sync, where, teams can synchronize notification importance, especially in work environments</li>
+            <li>Haptic Language: Rich haptic patterns, like different vibration sequences convey notification type without looking and pressure-sensitive, like a force touch could reveal more details</li>
+        </ul>
+</div>
+</div>
+</div>
+
+      <!-- Error Message & Summary Component -->
+      <div id="error-message-summary" class="component-content">
+        <div class="content-header">
+          <h2>Error Message and Summary</h2>
+            <p>Display error messages and summaries to users</p>
+        </div>
+        <div class="component-preview">
+          <h3>Error Message with Summary</h3>
+          <div id="errorSummary" role="alert" class="hidden"></div> <!-- 🔺 Moved above the form -->
+
+    <form id="myForm">
+      <fieldset>
+        <legend>Register</legend>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" aria-describedby="emailError">
+        <p id="emailError" class="error-message" aria-live="assertive"></p>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" aria-describedby="passwordError">
+        <p id="passwordError" class="error-message" aria-live="assertive"></p>
+    
+        <button class="btn" type="submit">Submit</button>
+      </fieldset>
+    </form>
+
+
+        <!-- Best Practices for Error Message & Summary -->
+<div class="component-code">
+    <h3>Best Practices for Error Message & Summary</h3>
+    <p>Effective error messages and summaries are crucial for user experience. Here are some best practices to ensure accessibility:</p>
+    <h4>Error Messages (Field-Level Feedback)</h4>
+    <ul>
+        <li>Clear and Specific: Indicate what went wrong and how to fix it (e.g., "Invalid email format user(at)example.com") and avoid vague messages like "Something went wrong"</li>
+        <li>Visible and Screen Reader-Friendly: Place error messages near the input field they relate to. Use aria-describedby="error-message-id" to link error messages to inputs. Set aria-live="assertive" for critical errors that need immediate attention</li>
+        <li>Keyboard and Mouse Interactivity: Make errors focusable (tabindex="-1") so keyboard users can navigate to them. Allow users to dismiss messages with the Escape key or a close button</li>
+        <li>Consistent Styling: Use consistent colors, fonts, and icons for error messages. Ensure sufficient contrast between text and background (4.5:1 ratio)</li>
+        <li>Validation on Input: Provide real-time feedback as users type, indicating errors immediately rather than waiting for form submission</li>
+    </ul>
+    <h4>Error Summary (Global Feedback)</h4>
+    <ul>
+        <li>Comprehensive Overview: Provide a summary of all errors at the top of the form, allowing users to quickly identify and address issues</li>
+        <li>Screen Reader Compatibility: Use role="alert" for error summaries to ensure they are announced immediately. Use aria-live="assertive" for critical errors</li>
+        <li>Clear Instructions: Include instructions on how to resolve errors in the summary (e.g., "Please correct the highlighted fields")</li>
+        <li>Accessible Dismissal: Allow users to dismiss the error summary with a close button or by pressing the Escape key</li>
+        <li>Allow Quick Fix Navigation: Each error in the summary should be clickable, focusing the related field. Example: Clicking "Email is required" moves focus to the email input.</li>
+    </ul>
+    <h4>New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in error message and summary design:</p>
+    <ul>
+        <li>Dynamic Error Messaging: Use machine learning to adapt error messages based on user behavior and preferences</li>
+        <li>Contextual Help: Provide contextual help or tooltips that appear when users hover over error messages, offering additional guidance</li>
+        <li>Visual Cues: Use animations or visual cues (e.g., shaking input fields) to draw attention to errors without being disruptive</li>
+        <li>Gamification: Introduce gamified elements, like progress bars or badges, to encourage users to correct errors and complete forms</li>
+        <li>Collaborative Error Resolution: Allow users to share error messages with support teams or peers for collaborative troubleshooting</li>
+        <li>Multi-Sensory Feedback: Combine visual, auditory, and haptic feedback for error messages to cater to different user preferences</li>
+        <li>AI-Powered Error Prevention: Instead of showing errors after submission, predict mistakes using AI (e.g., autocomplete suggests valid formats before entry)</li>
+        <li>Adaptive Error Sensitivity: Users can customize how errors are shown (e.g., neurodivergent-friendly “gentle” mode vs. urgent alerts)</li>
+        <li>Context-Aware Error Highlights: Dynamically adjust error placement based on screen size and user attention</li>
+        </ul>
+</div>
+</div>
+</div>
+</div>      
+
+          <!-- Status Message Component -->
+      <div id="status-message" class="component-content">
+        <div class="content-header">
+          <h2>Status Message</h2>
+            <p>Display status messages to users</p>
+        </div>
+        <div class="component-preview">
+          <button class="btn" id="openDialog">Show Status Message</button>
+<div id="statusDialog" role="alertdialog" aria-labelledby="statusTitle">
+    <div class="dialog-content">
+      <h2 id="statusTitle">System Update</h2>
+      <button id="closeDialog" aria-label="Close dialog">&times;</button>
+      <p id="statusMessage" role="alert">Status: Your settings have been saved successfully!</p>
+    </div>
+  </div>
+<div id="errorSummary" role="alert" class="hidden"></div>
+<p id="statusMessage" aria-live="polite"></p></div>
+
+
+        <!-- Best Practices for Status Message -->
+<div class="component-code">
+    <h3>Best Practices for Status Message</h3>
+    <p>Status messages are essential for keeping users informed. Here are some best practices to ensure accessibility:</p>    
+    <ul>
+        <li>Use role="dialog" for screen readers</li>
+        <li>Ensure keyboard navigation works: Esc key should close the dialog, and Tab should cycle through interactive elements</li>
+        <li>Apply aria-live="polite" for non-disruptive updates</li>
+        <li>Make the close button aria-label="Close dialog" for clarity</li>
+        <li>Provide clear and concise messages</li>
+    </ul>
+    <h4>Status Message New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in status message design:</p>
+    <ul>
+        <li>Adaptive Status Messages: Use machine learning to adapt messages based on user behavior and preferences</li>
+        <li>Contextual Help: Provide contextual help or tooltips that appear when users hover over status messages, offering additional guidance</li>
+        <li>Visual Cues: Use animations or visual cues (e.g., shaking input fields) to draw attention to errors without being disruptive</li>        
+        <li>Multi-Sensory Feedback: Combine visual, auditory, and haptic feedback for error messages to cater to different user preferences</li>
+    </ul>
+</div>
+</div>
+</div>
+</div>      
+    
+        <!-- Accordion Component -->
+      <div id="accordion" class="component-content">
+        <div class="content-header">
+          <h2>Accordion</h2>
+            <p>Display collapsible content sections</p>
+        </div>
+        <div class="component-preview">
+          <h2>Accordion Sociology Example</h2>
+    <div class="accordion" id="accordion">
+      <div class="accordion-item">
+        <button class="btn-head1" id="heading1" aria-expanded="false" aria-controls="content1">
+          Political Sociology
+        </button>
+        <div id="content1" role="region" aria-labelledby="heading1">
+          <p>Political sociology explores the intersection of politics and society, analyzing how power operates across different structures.</p>
+          <div>
+            <p><strong>Main Topics:</strong></p>
+            <p>Power and Authority</p>            
+            <div>
+              <p><strong>Further Topics:</strong></p>
+              <p>Impact of Globalization</p>
+              <p>Role of Civil Society</p>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="btn-head2" id="heading2" aria-expanded="false" aria-controls="content2">
+          Criminology
+        </button>
+        <div id="content2" role="region" aria-labelledby="heading2">
+          <p>Criminology examines the causes, consequences, and prevention of crime, alongside societal responses to criminal behavior.</p>
+          <div>
+            <p><strong>Main Topics:</strong></p>
+            <p>Criminal Behavior</p>
+            <p>Justice Systems</p>            
+            <div>
+              <p><strong>Further Topics:</strong></p>
+              <p>Impact of Technology on Crime</p>
+              <p>Juvenile Delinquency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- Best Practices for Accordion -->
+<div class="component-code">
+    <h3>Best Practices for Accordion</h3>
+    <p>Accordions are useful for displaying collapsible content sections. Here are some best practices to ensure accessibility:</p>   
+    <ul>
+        <li>Ensure that accordion has clear accessible labels for each section for user to understand the content hierarchy when using screen readers</li>
+        <li>The focus state is well-defined, allowing user to easily identify which section they are interacting with when navigating via keyboard</li>
+        <li>The accordion expands and collapses sections using standard ARIA roles and properties, ensuring compatibility with assistive technologies</li>
+        <li>Keyboard shortcuts allow should open or close sections (e.g., pressing Enter or Space on the header of an accordion item)</li>
+        <li>The state of the accordion (expanded or collapsed) is announced by screen readers when toggling. For instance, it might say, "Introduction, collapsed" or "Introduction, expanded"</li>
+        <li>Responsive Design: Styles ensure the accordion adapts well to various screen sizes using a fluid layout</li>
+        <li>Speech Recognition Tools: Clear, hierarchical semantic structure allows smooth interaction for users relying on voice commands</li>
+    </ul>
+    <h4>Accordion Implementation Practices</h4>
+    <p>The practice for only one section of accordions is expanded at a time is known as a single-open accordion. It helps streamline the user experience by reducing the cognitive load and minimizing the amount of visible content at once, which can be especially beneficial for screen reader users.</p>
+    <p>Then, there is a multi-open accordion, where multiple sections can be expanded simultaneously.</p>
+    <p>This design isn't inherently wrong. It depends on the context and user needs:</p>
+    <ul>
+        <li><strong>Single-Open Accordion:</strong> Works best when the content of each section is lengthy or when the user is expected to focus on one topic at a time. It prevents overwhelming the user by showing too much information</li>
+        <li><strong>Multi-Open Accordion:</strong> Suitable for scenarios where users might want to compare information across sections or where the content is relatively concise. For example, a FAQ section where users might want to see multiple questions and answers at once. However, it can lead to cognitive overload if too many sections are open at once</li>
+        <li><strong>Best Practice:</strong> Consider user needs and context. If using a multi-open accordion, ensure that the design allows users to easily collapse sections they no longer need</li>
+        <li><strong>Testing:</strong> Always test with real users to see which design works best for your specific audience</li>
+    </ul>
+</div>
+</div>
+</div>
+</div> 
+
+       <!-- Tabs Component -->
+      <div id="tabs" class="component-content">
+        <div class="content-header">
+          <h2>Tabs</h2>
+            <p>Display content in a tabbed interface</p>
+        </div>
+        <div class="component-preview">
+          <!-- Tab navigation -->
+            <div class="tab-container">
+                <nav class="tab-nav" aria-label="Content tabs">
+                    <button class="tab-button active" aria-controls="tab-1" aria-selected="true">Tab 1</button>
+                    <button class="tab-button" aria-controls="tab-2" aria-selected="false">Tab 2</button>
+                    <button class="tab-button" aria-controls="tab-3" aria-selected="false">Tab 3</button>
+                </nav>
+
+                <div id="tab-1" class="tab-content active">
+                    <h2>Tab 1 Content</h2>
+                    <p>This is the content for tab 1.</p>
+                </div>
+
+                <div id="tab-2" class="tab-content">
+                    <h2>Tab 2 Content</h2>
+                    <p>This is the content for tab 2.</p>
+                </div>
+
+                <div id="tab-3" class="tab-content">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content for tab 3.</p>
+                </div>
+            </div>
+
+        <!-- Best Practices for Tabs -->
+<div class="component-code">
+    <h3>Best Practices for Tabs</h3>
+    <p>Tabs are useful for displaying content in a tabbed interface. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use role="tablist" for the tab container and role="tab" for each tab button</li>
+        <li>Ensure that only the active tab is visible, and use aria-selected="true" for the active tab</li>
+        <li>Use aria-controls to associate each tab with its corresponding content panel</li>
+        <li>Ensure keyboard navigation works: Tab should move focus between tabs, and Enter/Space should activate the selected tab</li>
+        <li>Provide clear labels for each tab to indicate their purpose</li>
+        <li>Use ARIA attributes to manage focus and visibility of content panels</li>  
+    </ul>
+    <h4>Tabs New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in tab design:</p>
+    <ul>
+        <li>Adaptive Tabs: Use machine learning to adapt tab content based on user behavior and preferences</li>
+        <li>Contextual Tabs: Provide contextual help or tooltips that appear when users hover over tabs, offering additional guidance</li>
+        <li>Visual Cues: Use animations or visual cues (e.g., highlighting active tab) to draw attention to the selected tab without being disruptive</li>        
+        <li>Multi-Sensory Feedback: Combine visual, auditory, and haptic feedback for tab interactions to cater to different user preferences</li>    
+    </ul>
+</div>
+</div>
+</div>
+</div>  
+
+       <!-- Modal Dialog Component -->
+      <div id="modal-dialog" class="component-content">
+        <div class="content-header">
+          <h2>Modal Dialog Demo</h2>
+            <p>Display modal dialogs to users</p>
+        </div>
+        <div class="component-preview">
+          <button id="openModalBtn" class="btn-primary">Open Modal</button>
+        <p>This demonstrates an accessible modal dialog with proper focus management, keyboard navigation, and responsive design.</p>
+    </div>
+
+    <!-- Modal Dialog -->
+    <div id="exampleModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title">Example Modal Dialog</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is an accessible modal dialog. It traps focus, can be closed with the Escape key, and properly manages screen reader announcements.</p>
+                <p>Try tabbing through the elements - focus should cycle within the modal until you close it.</p>
+                <form>
+                    <div style="margin-bottom: 15px;">
+                        <label for="exampleInput">Sample Input:</label>
+                        <input type="text" id="exampleInput" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary">Secondary Action</button>
+                <button class="btn-primary">Primary Action</button>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Best Practices for Modal Dialogs -->
+<div class="component-code">
+    <h3>Best Practices for Modal Dialogs</h3>
+    <p>Modal dialogs are useful for displaying important information or actions. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Must be properly labelled with ARIA attributes</li>
+        <li><strong>Duration Guidelines:</strong> Should appear immediately when triggered (no animation delay); should remain visible until user action (no auto-dismissal); animations should be brief (200-300ms) and optional for reduced motion</li>
+        <li>Must trap and manage keyboard focus</li>
+        <li>Must provide keyboard-accessible controls</li>
+        <li>Must be announced to screen readers</li>
+        <li>Must have proper backdrop interaction</li>
+        <li>Must support escape key dismissal</li>  
+    </ul>
+    <h4>When to use Modals</h4>
+    <p>Modals are best used for:</p>
+    <ul>
+        <li>Critical information that requires immediate user attention</li>
+        <li>Actions that need to be completed before proceeding (e.g., confirmation dialogs)</li>
+        <li>Forms or inputs that are contextually relevant to the current task</li>
+        <li>Alerts or notifications that require user acknowledgment</li>
+        <li>Content that is secondary to the main task but still important (e.g., help or support)</li>
+    </ul>
+    <h4>When NOT to use Modals</h4>
+    <p>Modals should be avoided for:</p>
+    <ul>
+        <li>Non-critical information that can be displayed inline</li>
+        <li>Content that is lengthy or complex, which may overwhelm users in a modal</li>
+        <li>Multiple actions or options that require extensive user input</li>
+        <li>Navigation or content that can be better served with a dedicated page or section</li>
+        <li>On mobile devices if the content could be a full-page view</li>
+    </ul>
+    <h4>Modals New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in modal design:</p>
+    <ul>
+        <li>Adaptive Modals: Modals that adjust their size and layout based on content type. For example: A small alert vs. a complex form modal</li>
+        <li>AI-Powered Contextual Modals: Modals that appear based on user behaviour patterns and content dynamically generated based on user needs</li>
+        <li>Stackable/Nested Modals: Advanced patterns allowing multiple modals with clear hierarchy and visual indicators showing depth of modal stack</li>        
+        <li>Voice-Controlled Modals: Modals that can be opened/closed/dismissed via voice commands. That’s it has integration with voice assistants</li>        
+        <li>Multi-Sensory Modals: Modals that provide visual, auditory, and haptic feedback to enhance user experience</li>    
+    </ul>
+    <h5>Modals Future Possibilities</h5>
+    <p>Explore future possibilities in modal design:</p>
+    <ul>
+        <li>Augmented Reality (AR) Modals: Modals that overlay information in the real world using AR technology</li>
+        <li>Virtual Reality (VR) Modals: Immersive modals that provide a 3D experience in virtual environments</li>
+        <li>Neurofeedback-Driven Modals: Modals that adapt based on user cognitive load and emotional state</li>
+        <li>Biometric-Triggered Modals: Modals that appear based on biometric data (e.g., heart rate, facial expression)</li>
+        <li>Blockchain-Verified Modals: Modals that provide secure, verifiable information using blockchain technology</li>
+        <li>Quantum Computing-Enhanced Modals: Modals that leverage quantum computing for complex data visualization and interaction</li>
+        <li>Multi-User Collaborative Modals: Modals that allow multiple users to interact and collaborate in real-time</li>
+        <li>Emotionally Adaptive Modals: Modals that change content and tone based on user emotions detected through AI</li>
+        <li>Neurofeedback-Driven Modals: Modals that adapt based on user cognitive load and emotional state</li>
+     </ul>   
+</div>
+</div>
+</div>
+</div>        
+
+        <!-- Progress Wizard Component -->         
+      <div id="progress-wizard" class="component-content">      
+        <div class="content-header">         
+          
+        <div class="wizard-container" id="wizardContainer">
+        <div class="wizard-header">
+            <h2 class="wizard-title">Account Setup Wizard</h2>
+            <div class="wizard-progress-text" id="progressText">Step 1 of 4</div>
+        </div>
+        <div class="component-preview">
+
+        <ol class="wizard-steps" role="tablist">
+            <li class="wizard-step current" id="step1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">
+                <div class="wizard-step-indicator">1</div>
+                <div class="wizard-step-label">Personal Info</div>
+            </li>
+            <li class="wizard-step" id="step2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">
+                <div class="wizard-step-indicator">2</div>
+                <div class="wizard-step-label">Account Details</div>
+            </li>
+            <li class="wizard-step" id="step3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="0">
+                <div class="wizard-step-indicator">3</div>
+                <div class="wizard-step-label">Preferences</div>
+            </li>
+            <li class="wizard-step" id="step4" role="tab" aria-selected="false" aria-controls="panel4" tabindex="0">
+                <div class="wizard-step-indicator">4</div>
+                <div class="wizard-step-label">Confirmation</div>
+            </li>
+        </ol>
+
+        <div class="wizard-content">
+            <div class="wizard-panel active" id="panel1" role="tabpanel" aria-labelledby="step1">
+                <h2 class="wizard-panel-title">Personal Information</h2>
+                <div class="wizard-form-group">
+                    <label for="firstName" class="wizard-form-label">First Name</label>
+                    <input type="text" id="firstName" class="wizard-form-control" required>
+                    <div class="wizard-validation-error" id="firstNameError">Please enter your first name</div>
+                </div>
+                <div class="wizard-form-group">
+                    <label for="lastName" class="wizard-form-label">Last Name</label>
+                    <input type="text" id="lastName" class="wizard-form-control" required>
+                    <div class="wizard-validation-error" id="lastNameError">Please enter your last name</div>
+                </div>
+            </div>
+
+            <div class="wizard-panel" id="panel2" role="tabpanel" aria-labelledby="step2" hidden>
+                <h2 class="wizard-panel-title">Account Details</h2>
+                <div class="wizard-form-group">
+                    <label for="email" class="wizard-form-label">Email Address</label>
+                    <input type="email" id="email" class="wizard-form-control" required>
+                    <div class="wizard-validation-error" id="emailError">Please enter a valid email address</div>
+                </div>
+                <div class="wizard-form-group">
+                    <label for="password" class="wizard-form-label">Password</label>
+                    <input type="password" id="password" class="wizard-form-control" required minlength="8">
+                    <div class="wizard-validation-error" id="passwordError">Password must be at least 8 characters</div>
+                </div>
+            </div>
+
+            <div class="wizard-panel" id="panel3" role="tabpanel" aria-labelledby="step3" hidden>
+                <h2 class="wizard-panel-title">Preferences</h2>
+                <div class="wizard-form-group">
+                    <label class="wizard-form-label">Notification Preferences</label>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" name="notifications" value="email"> Email notifications
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" name="notifications" value="sms"> SMS notifications
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" name="notifications" value="push"> Push notifications
+                        </label>
+                    </div>
+                </div>
+                <div class="wizard-form-group">
+                    <label for="theme" class="wizard-form-label">Theme Preference</label>
+                    <select id="theme" class="wizard-form-control">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="system">System Default</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="wizard-panel" id="panel4" role="tabpanel" aria-labelledby="step4" hidden>
+                <h2 class="wizard-panel-title">Confirmation</h2>
+                <div class="wizard-form-group">
+                    <p>Please review your information before submitting:</p>
+                    <div id="reviewContent" style="margin-top: 1rem; padding: 1rem; background-color: #f8f9fa; border-radius: 0.25rem;"></div>
+                </div>
+                <div class="wizard-form-group">
+                    <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                        <input type="checkbox" id="terms" required style="margin-top: 0.2rem;">
+                        <span>I agree to the terms and conditions</span>
+                    </label>
+                    <div class="wizard-validation-error" id="termsError">You must accept the terms and conditions</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wizard-footer">
+            <button class="wizard-btn wizard-btn-back" id="backBtn" disabled>Back</button>
+            <button class="wizard-btn wizard-btn-next" id="nextBtn">Next</button>
+            <button class="wizard-btn wizard-btn-skip" id="skipBtn" hidden>Skip</button>
+        </div>
+    </div>
+    
+       
+        <!-- Best Practices for Progress Wizard -->
+<div class="component-code">
+    <h3>Best Practices for Progress Wizard</h3>
+    <p>Progress wizards are useful for guiding users through multi-step processes. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Semantic HTML: Use (ol) for the step list and (li) for each step, for ARIA Attributes: use aria-current="step" for current step, aria-disabled="true" for inactive steps</li>
+        <li>Keyboard Navigation: Ensure all interactive elements are tabbable with proper focus styles</li>
+        <li>Screen Reader Support: Provide clear status updates when steps change</li>
+        <li>Clear Progress Indicator: Ensure visual connection between steps (lines, arrows, or connectors), maintain step states by ensuring distinct styles for completed, current, and upcoming steps. Ensure responsive layout, that is horizontal on desktop, vertical or compressed on mobile and abide with the colour contrast minimum 4.5:1 for text and interactive elements</li>
+        <li>Validation: Prevent advancing until current step is complete, and provide feedback, by showing clear error messages for validation failures</li>
+        <li>Persistence: Save progress if user leaves and returns, and allow returning to previous steps when appropriate</li>
+        <li>Clear Labels: Ensure concise step titles with optional descriptions, show current position (e.g., "Step 2 of 5"), and maintain consistent button placement (typically bottom-right for next, bottom-left for back)</li>  
+    </ul>    
+    
+    <h4>Progress Wizard New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in progress wizard design:</p>
+    <ul>
+        <li>Adaptive Progress Wizard: Dynamic Step Ordering, that is rearrange steps based on user responses; conditional branching, that is, show/hide steps based on previous answers, and personalized pacing that adjusts complexity based on user behaviour</li>
+        <li>Three-Dimensional Wizard: Z-Axis Navigation, that is steps appear to move forward/backward in 3D space, and visual cues showing progress through z-space</li>
+        <li>Ambient Wizard: Background Progression, that is, availability of a subtle, always-visible progress indicator, gentle notifications when steps complete, and contextual help. Help appears based on current step</li>       
+    </ul>    
+</div>
+</div>
+</div>
+</div>
+
+        <!--Pagination Component-->
+        <div id="page-navigation" class="component-content">      
+        <div class="content-header">
+        <!--<div class="content">-->
+        <h2>Accessible Pagination Example</h2>
+        <p>This demonstrates a fully accessible pagination component with JavaScript functionality.</p>
+        
+        <div class="component-preview">
+        <h2>Pagination Example</h2>
+        <!-- Content that would change with pagination -->
+        <div id="pagination-content" style="min-height: 300px; margin: 30px 0; padding: 20px; border: 1px dashed #ccc;">
+            <h2>Page 1 Content</h2>
+            <p>This content would change when navigating between pages.</p>
+        </div>
+        
+        <!-- Pagination Navigation -->
+        <div class="pagination-container">
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pagination">
+                    <li class="page-item">
+                        <a href="#" class="page-link disabled" aria-label="Previous" data-page="prev">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link active" data-page="1">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link" data-page="2">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link" data-page="3">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link" data-page="4">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link" data-page="5">5</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link" aria-label="Next" data-page="next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Best Practices for Pagination -->
+<div class="component-code">
+    <h3>Best Practices for Pagination</h3>
+    <p>Pagination is useful for displaying large sets of data. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Clear Navigation: Use numbered pages, "Next" and "Previous" buttons, and ensure users can easily jump to specific pages</li>
+        <li>Consistent Layout: Keep pagination controls in a predictable location, usually at the bottom of the content</li>
+        <li>Mobile-Friendly Design: Ensure pagination works well on smaller screens, using touch-friendly buttons</li>
+        <li>Logical Page Limits: Avoid overwhelming users with too many items per page—20 to 50 items per page is a common range</li>
+        <li>Accessible Controls: Ensure pagination is keyboard-navigable and screen-reader friendly, using proper ARIA attributes</li>
+        <li>Self-Canonicalization: Each paginated page should have a canonical tag pointing to itself to prevent duplicate content issues</li>
+        <li>Internal Linking: Ensure paginated pages link to each other logically to distribute link equity</li>  
+        <li>Avoid Infinite Scroll for SEO: If using infinite scroll, provide a fallback pagination system so search engines can index all content</li>
+        <li>Lazy Loading: Consider lazy loading for images and content to improve performance on paginated pages</li>
+        <li>Efficient Database Queries: Optimize queries to fetch only the necessary data per page</li>
+        <li>Cache Pagination Data: Reduce server load by caching frequently accessed paginated content</li>
+        <li>Descriptive URLs: Use meaningful URLs like example.com/products?page=2 instead of cryptic query strings</li>       
+    </ul>    
+</div>
+</div>
+</div>
+</div>
+    </div>
+
+         <!-- Breadcrumb Component -->          
+      <div id="breadcrumb" class="component-content">
+        <div class="content-header">
+          <h2>Breadcrumb</h2>
+            <p>Display breadcrumb navigation to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- Breadcrumb navigation -->
+    <div class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Fruits</a></li>
+            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link" aria-current="page">Luxurious Cars</a></li>
+        </ul>
+    </div>
+
+    <!--Breadcrumb best practices-->
+<div class="component-code">
+    <h3>Best Practices for Breadcrumb</h3>
+    <p>Breadcrumbs are useful for displaying hierarchical navigation. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Keep It Short & Clear: Use concise labels that reflect the page hierarchy</li>
+        <li>Use Location-Based Breadcrumbs: Show users where they are in the site structure</li>
+        <li>Ensure Accessibility: Use (nav) with aria-label="Breadcrumb" and proper link semantics</li>
+        <li>Maintain Consistent Placement: Typically at the top of the page, above the main content</li>
+        <li>Use a consistent separator (e.g., ">" or "/") between breadcrumb items</li>
+        <li>Make It Clickable: Each breadcrumb should be a link, except the current page</li>
+        <li>Optimize for Mobile: Consider collapsible breadcrumbs or horizontal scrolling for small screens</li>
+        <li>Use ARIA Roles: Use role="navigation" for the breadcrumb container and aria-current="page" for the current page</li>
+        <li>Test with Real Users: Ensure the breadcrumb structure makes sense to your target audience</li>
+        <li>Use Descriptive Labels: Ensure each breadcrumb label is descriptive and meaningful</li>       
+    </ul>
+    <h4>Breadcrumb New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in breadcrumb design:</p>
+    <ul>
+        <li>AI-Powered Breadcrumbs: Dynamically adjust based on user behaviour, showing the most relevant paths</li>
+        <li>Contextual Breadcrumbs: Instead of a fixed hierarchy, breadcrumbs could adapt based on user intent</li>
+        <li>Voice Navigation Breadcrumbs: Integrate with voice assistants for hands-free navigation</li>
+        <li>Multi-Sensory Feedback: Combine visual, auditory, and haptic feedback for breadcrumb interactions to cater to different user preferences</li>
+        <li>Breadcrumbs with Micro-Interactions: Hover effects or subtle animations to improve engagement</li>
+        <li>Personalized Breadcrumbs: Tailor navigation based on user preferences or past interactions</li>        
+    </ul>   
+</div>
+</div>
+    </div>
+    </div>
+
+    <!-- Filters Component -->          
+      <div id="filters" class="component-content">
+        <div class="content-header">
+          <h2>Filters</h2>
+            <p>Display filter options to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- Filters -->
+    <form id="filter-form" aria-labelledby="filter-label">
+        <fieldset>
+            <legend id="filter-label">Filter Options</legend>
+    
+            <label for="category-filter">Category:</label>
+            <select id="category-filter" name="category" aria-label="Filter by category">
+                <option value="all">All</option>
+                <option value="tech">Technology</option>
+                <option value="design">Design</option>
+                <option value="business">Business</option>
+            </select>
+    
+            <label for="free-filter">Free Only:</label>
+            <input type="checkbox" id="free-filter" name="free" aria-label="Filter by free items">
+    
+            <label for="search-filter">Search:</label>
+            <input type="text" id="search-filter" name="search" placeholder="Enter keywords" aria-label="Search items">
+    
+            <button class="apply" type="submit">Apply Filters</button>
+        </fieldset>
+    </form>
+    
+    <div id="results" aria-live="polite">
+        <ul id="filtered-items">
+            <!-- Items dynamically generated here -->
+        </ul>
+    </div>
+
+
+    <!--Filters Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Filters</h3>
+    <p>Filters are useful for narrowing down search results. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Keyboard Navigation: Ensure filters are fully operable using a keyboard (e.g., using the tab key, enter to apply, and Esc to close dropdowns)</li>
+        <li>Screen Reader Compatibility: Use ARIA attributes (like aria-label, aria-live, and aria-describedby) for better compatibility with assistive technologies</li>
+        <li>Focus States: Provide clear visual focus indicators to help users navigate filter options</li>
+        <li>Progressive Disclosure: Show only relevant filters, allowing users to expand additional filtering options if needed</li>
+        <li>Instant Feedback: Apply filters dynamically without requiring users to submit changes manually</li>
+        <li>Preserving User Choices: Maintain filter selections even after page refreshes to improve consistency</li>
+        <li>Adaptable Layouts: Ensure filters adjust smoothly across devices, utilizing CSS media queries</li>
+        <li>Mobile-Friendly Filters: Use collapsible sections or dropdown menus to save space on smaller screens</li>
+        <li>Efficient Loading: Avoid excessive filtering options that slow down page rendering</li>
+        <li>Optimized Queries: Minimize unnecessary database calls when filtering large datasets</li>       
+    </ul>
+    <h4>Filters New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in filter design:</p>
+    <ul>
+        <li>Adaptive Filters: Utilize AI-powered personalization to suggest relevant filters based on user history</li>
+        <li>Voice-Activated Filtering: Enable users to apply filters using voice commands</li>
+        <li>Multi-Sensory Filtering: Future interfaces might allow users to filter content based on ambient conditions or accessibility needs</li>
+        <li>Augmented Reality Filters: Imagine filtering products in a virtual store using AR technology</li>
+        <li>Contextual Filters: Filters that adapt based on user behaviour and preferences, showing the most relevant options</li>      
+    </ul>   
+</div>
+</div>
+    </div>
+    </div>
+
+        <!-- Sort Component -->          
+      <div id="sort" class="component-content">
+        <div class="content-header">
+          <h2>Sort</h2>
+            <p>Display sort options to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- ARIA Live Region for announcements -->
+        <div id="sort-announcement" class="aria-live-region" aria-live="polite" aria-atomic="true"></div>
+        
+        <section class="sort-section" aria-labelledby="select-sort-heading">
+            <h2 id="select-sort-heading">Product Sorting</h2>
+            
+            <div class="sort-controls">
+                <label for="sort-select" class="sort-label">Sort by:</label>
+                <select id="sort-select" class="sort-select" aria-describedby="sort-instructions">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="date-asc">Date (Oldest first)</option>
+                    <option value="date-desc">Date (Newest first)</option>
+                    <option value="price-asc">Price (Low to high)</option>
+                    <option value="price-desc">Price (High to low)</option>
+                </select>
+                <span id="sort-instructions" class="aria-live-region">Selecting an option will automatically sort the products</span>
+            </div>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Widget A</td>
+                        <td>2023-03-12</td>
+                        <td>$19.99</td>
+                        <td>4.2</td>
+                    </tr>
+                    <tr>
+                        <td>Gadget B</td>
+                        <td>2023-05-18</td>
+                        <td>$34.99</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>Tool C</td>
+                        <td>2023-01-05</td>
+                        <td>$12.99</td>
+                        <td>3.8</td>
+                    </tr>
+                    <tr>
+                        <td>Device D</td>
+                        <td>2023-06-22</td>
+                        <td>$49.99</td>
+                        <td>4.7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+
+    <!--Sort Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Sorting</h3>
+    <p>Sorting is useful for organizing data. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Semantic HTML: Use (button) or (select) elements for sort controls</li>
+        <li>Labels: Clearly associate labels with sort controls using (label) or aria-labelledby, and use aria-sort, aria-selected, and aria-current to indicate sort state</li>
+        <li>Keyboard Navigation: Ensure full keyboard operability (Tab, Space/Enter, Arrow keys), and maintain logical focus order and visible focus states</li>
+        <li>Clear Indicators: Visually show the current sort direction (ascending/descending), and place sort controls near the content being sorted</li>
+        <li>Immediate Feedback: Provide visual feedback during sorting operations, and remember user's sort preferences when possible</li>
+        <li>Mobile Considerations: Adapt sort controls for touch interfaces</li>
+        <li>Client-side Sorting: For small datasets, sort in the browser, and server-side sorting for large datasets, use AJAX calls. Also, keep debouncing, for real-time sorting. Delay execution during rapid interaction. Show activity indicators during sorting operations</li>
+        <li>Progressive Enhancement: Ensure basic functionality without JavaScript, and provide fallbacks for older browsers</li>
+        <li>Accessible Error Handling: Provide clear error messages for sorting failures</li>    
+    </ul>
+    <h4>Sorting New Ideas & Theoretical Innovations</h4>
+    <p>Explore new ideas and theoretical innovations in sorting design:</p>
+    <ul>
+        <li>AI-Powered Dynamic Sorting: Sorting that adapts based on user behaviour and preferences, for example, frequently sorting by price might automatically prioritize price-relevant factors</li>
+        <li>Multi-Dimensional Sorting: Allow sorting by multiple criteria simultaneously with weighted importance, and visual interface for adjusting sort priority sliders</li>
+        <li>Context-Aware Sorting: Sorting that considers contextual factors (time of day, location, device), for example, restaurant listings might sort differently at breakfast vs dinner time</li>
+        <li>Collaborative Sorting: Multiple users can contribute to sorting criteria for shared results, which can be useful for team decision making or group shopping</li>
+        <li>Visual Pattern Sorting: Sort items based on visual characteristics (colour, shape) using image recognition, for example, "Sort these products from lightest to darkest colour"</li> 
+        <li>Natural Language Sorting: Allow sorting via natural language commands, for example, "Show me the most popular items first, then by lowest price"</li>
+        <li>Emotion-Based Sorting: Sorting that responds to detected user emotion (from voice or facial analysis), for example, when stressed, might prioritize calming or familiar options</li> 
+        <li>Predictive Sorting: Anticipates user sort preferences before they explicitly request them by learning from patterns across similar users</li>
+        <li>Haptic Feedback Sorting: Provides tactile feedback during sort operations, allowing different vibrations for different sort criteria</li>    
+    </ul>   
+</div>
+</div>
+    </div>
+    </div>
+
+     <!-- Layouts Component -->          
+      <div id="layouts" class="component-content">
+        <div class="content-header">
+          <h2>Grid, Table, Headings, & Paragraphs</h2>
+            <p>Display grid, table, headings, and paragraphs to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- Grid layout example -->
+    <h2>Grid Layout Example with Accessibility</h2>
+    <p>Below is a grid layout displaying items with accessibility features:</p>
+    <div class="grid-container">
+        <div class="grid-item" tabindex="0" aria-label="Item 1">Item 1</div>        
+        <div class="grid-item" tabindex="0" aria-label="Item 2">Item 2</div>
+        <div class="grid-item" tabindex="0" aria-label="Item 3">Item 3</div>
+        <div class="grid-item" tabindex="0" aria-label="Item 4">Item 4</div>        
+    </div><hr>
+
+<!--Table layout example-->
+<h2>Table Layout Example</h2>
+<p>Below is a table displaying accessibility scores:</p>
+<table class="score-table" role="table" aria-label="Accessibility Scores">
+    <caption id="table-caption">Accessibility Scores</caption>    
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+        <tr>
+            <td>Joe</td>
+            <td>95%</td>
+        </tr>
+        <tr>
+            <td>Joan</td>
+            <td>100%</td>
+        </tr>
+        <tr>
+            <td>A11Y Expert</td>
+            <td>98%</td>
+        </tr>
+        <tr>
+            <td>Inclusive Designer</td>
+            <td>96%</td>
+        </tr>
+    </tbody>
+</table><hr>
+
+<!--Heading example-->
+<h2>Headings Example</h2>
+<p>Headings are important for accessibility and SEO:</p>
+<h1>Main Title</h1>
+<h2>Subheading Level 2</h2>
+<h3>Subheading Level 3</h3>
+<h4>Subheading Level 4</h4>
+<h5>Subheading Level 5</h5>
+<h6>Subheading Level 6</h6>
+<hr>
+<!--Paragraph example-->
+<h2>Paragraph Example</h2>
+<p>Paragraphs are used to structure text content. Below is an example of a paragraph:</p>
+<p class="accessible-text">
+    This is an inclusive paragraph designed to be readable across all devices.
+</p>
+
+
+
+    <!--Layouts Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Grid (Flexible Structure)</h3>
+    <p>Grids are useful for displaying content in a structured manner. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use Semantic Markup: Apply div elements with clear roles, or use (main), (section), and (article) where appropriate</li>
+        <li>Keyboard Accessibility: Ensure users can navigate grid-based content using the tab key, and avoid trapping focus in dynamic layouts</li>
+        <li>Responsive Design: Use minmax(), auto-fit, or auto-fill in CSS grid to allow fluid scaling across devices</li>
+        <li>Screen Reader Clarity: Define regions using role="region" with descriptive aria-label attributes for better assistive tech support</li>
+        <li>Focus Management: Ensure focus is visible and logical when navigating through grid items</li>
+        <li>Color Contrast: Maintain a minimum contrast ratio of 4.5:1 for text and background colours</li>  
+    </ul>
+    <h4>Table Layout (Structured Data)</h4>
+    <p>Tables are useful for displaying structured data. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use Semantic Markup: Use (table), (thead), (tbody), (th), and (td) elements for proper structure</li>
+        <li>Table Headers: Use (th) for headers and scope attributes to define row/column relationships</li>
+        <li>Captioning: Provide a caption for the table using the (caption) element</li>
+        <li>Keyboard Navigation: Ensure users can navigate tables using the tab key, and provide clear focus indicators</li>
+        <li>Responsive Design: Use CSS media queries to adapt table layouts for smaller screens</li>
+        <li>Screen Reader Support: Use ARIA roles and properties to enhance screen reader compatibility</li> 
+        <li>Data Tables: Use (summary) attribute to provide a summary of the table's purpose and structure</li>
+        <li>Make It Responsive: Use overflow-x: auto to enable horizontal scrolling for complex tables instead of forcing users to zoom</li>   
+    </ul>
+    <h4>Headings (Content Structure)</h4>
+    <p>Headings are useful for structuring content. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use Semantic Markup: Use (h1) to (h6) elements for headings, maintaining a logical hierarchy</li>
+        <li>Keyboard-Friendly Navigation: Ensure users can quickly jump between headings using assistive tech features</li>
+        <li>Use Descriptive Titles: Keep headings meaningful to improve comprehension</li>
+        <li>Consistent Styling: Maintain consistent font sizes and styles for headings across the site</li>
+        <li>Screen Reader Support: Use ARIA landmarks to define sections of the page</li>   
+    </ul> 
+    <h4>Paragraphs (Text Content)</h4>
+    <p>Paragraphs are useful for displaying text content. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Use Semantic Markup: Use (p) elements for paragraphs, and avoid using (div) for text content</li>
+        <li>Line Length: Keep line lengths between 50-75 characters for better readability</li>
+        <li>Line Height: Use a line height of 1.5 to improve readability</li>
+        <li>Font Size: Use a minimum font size of 16px for body text</li>
+        <li>Contrast Ratio: Maintain a minimum contrast ratio of 4.5:1 for text and background colours</li>
+        <li>Responsive Design: Ensure paragraphs adapt to different screen sizes without losing readability</li>
+        <li>Use Lists: Use (ul) or (ol) for lists to improve readability and structure</li>
+        <li>Accessible Text: Use clear and concise language, and avoid jargon or complex terms</li>
+        <li>Whitespace: Use whitespace effectively to separate paragraphs and improve readability</li>
+        <li>Text Alignment: Use left-aligned text for better readability, and avoid justified text</li>
+        <li>Accessible Links: Ensure links are descriptive and provide context</li>
+        <li>Use ARIA Roles: Use ARIA roles and properties to enhance screen reader compatibility</li>
+        <li>Test with Real Users: Ensure the text content is understandable and accessible to your target audience</li>
+    </ul>  
+</div>
+</div>
+    </div>
+    </div>
+
+    <!-- Tags Component -->          
+      <div id="tags" class="component-content">
+        <div class="content-header">
+          <h2>Tags</h2>
+            <p>Display tags to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- ARIA Live Region for announcements -->
+        <div id="tags-announcement" class="aria-live-region1" aria-live="polite" aria-atomic="true"></div>
+        
+        <section class="tags-section" aria-labelledby="tags-heading">
+            <h2 id="tags-heading">Add Tags</h2>
+            
+            <div class="tags-container" id="tagsInputContainer">
+                <ul class="tags-list" id="tagsList" role="list"></ul>
+                <input 
+                    type="text" 
+                    class="tag-input" 
+                    id="tagInput" 
+                    placeholder="Add tags..." 
+                    aria-labelledby="tags-heading tagInstructions"
+                    aria-describedby="tagInstructions">
+            </div>
+            <p id="tagInstructions" class="tag-instructions">
+                Type a tag and press Enter. Press Delete or Backspace to remove tags.
+            </p>
+        </section>
+    </div>
+
+    <!--Tags Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Tags</h3>
+    <p>Tags are useful for categorizing content. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Semantic Structure: Use (ul) for tags container and (li) for individual tags</li>
+        <li>Screen Reader Support: Add role="list" and role="listitem" for better compatibility, ensure tags can be focused with Tab and removed with Delete/Backspace</li>
+        <li>ARIA Attributes: Use aria-label, aria-describedby, and aria-live regions, and provide clear focus states and contrast ratios</li>
+        <li>Clear Removal: Include visible "remove" buttons (X icons), include input flexibility, for example, allow comma-separated entry or standalone entry and provide visual feedback for invalid tags</li>
+        <li>Size Adaptability: Ensure tags work on mobile and desktop, and consider categorizing tags visually when appropriate</li>
+        <li>Responsive Design: Wrap tags appropriately on small screens, and optimize for large numbers of tags</li>
+        <li>State Management: Track selected/active states, and save tags when appropriate (localStorage, etc.)</li>        
+    </ul>
+    
+    <h4>Emerging Tag Concepts and Future Ideas</h4>
+    <p>Explore new ideas and theoretical innovations in tag design:</p>
+    <ul>
+        <li>AI-Powered Tag Suggestions: Context-aware tag recommendations as you type, learning from your tagging patterns over time, and could suggest related tags or auto-complete based on content</li>
+        <li>Emotion-Based Tagging: Tags that capture emotional responses to content, could use sentiment analysis or direct user input, for example, "happy", "inspiring", "controversial"</li>
+        <li>Dynamic Tag Visualization: Tags that resize based on frequency/importance</li>
+        <li>Voice-Only Tagging: Completely voice-driven tag creation and management, by using natural language processing for complex tagging, for example, "Tag this as urgent and related to project Apollo"</li>
+        <li>Self-Organizing Tags: Tags that automatically cluster related content, machine learning identifies relationships between tags, and creates hierarchical or networked tag structures</li>
+        <li>Biometric Tags: Tags generated from physiological responses, for examples, heart rate increase could tag content as "exciting" or eye-tracking could generate "attention-grabbing" tags</li>
+        <li>Predictive Tagging: System predicts and applies likely tags automatically. User can confirm or reject suggestions. Such reduces manual tagging effort</li>
+        <li>Augmented Reality Tags: Tags that appear in AR environments, for example, tagging physical objects or locations with digital information</li>       
+    </ul>  
+</div>
+</div>
+    </div>
+    </div>
+
+
+      <!-- Timeline Component -->          
+      <div id="timeline" class="component-content">
+        <div class="content-header">
+            <div class="line-container"></div>
+          <h2>Timeline</h2>
+            <p>Display timeline to users</p>
+        </div>
+        <div class="component-preview">             
+    
+    <!-- ARIA Live Region -->
+        <div id="timeline-announcement" class="aria-live-region2" aria-live="polite" aria-atomic="true"></div>
+        
+        <div class="timeline-container">
+            <div class="timeline-line" role="presentation"></div>
+            
+            <ol class="timeline-items" role="list">
+                <!-- Past Event -->
+                <li class="timeline-item" data-status="past" tabindex="0" role="listitem">
+                    <div class="timeline-content">
+                        <span class="timeline-date">January 2025</span>
+                        <h3 class="timeline-title">Project Kickoff</h3>
+                        <p class="timeline-desc">Initial planning and requirements gathering for the new platform.</p>
+                        <div class="timeline-actions">
+                            <button class="timeline-button">View Details</button>
+                            <button class="timeline-button">Download Files</button>
+                        </div>
+                    </div>
+                    <div class="timeline-dot" role="presentation" aria-hidden="true"></div>
+                </li>
+                
+                <!-- Current Event -->
+                <li class="timeline-item" data-status="current" tabindex="0" role="listitem">
+                    <div class="timeline-content">
+                        <span class="timeline-date">June 2025</span>
+                        <h3 class="timeline-title">Development Phase</h3>
+                        <p class="timeline-desc">Core development underway with weekly sprints and reviews.</p>
+                        <div class="timeline-actions">
+                            <button class="timeline-button">View Progress</button>
+                            <button class="timeline-button">Join Meeting</button>
+                        </div>
+                    </div>
+                    <div class="timeline-dot" role="presentation" aria-hidden="true"></div>
+                </li>
+                
+                <!-- Future Event -->
+                <li class="timeline-item" data-status="future" tabindex="0" role="listitem">
+                    <div class="timeline-content">
+                        <span class="timeline-date">December 2025</span>
+                        <h3 class="timeline-title">Launch Planned</h3>
+                        <p class="timeline-desc">Target release date for the completed platform.</p>
+                        <div class="timeline-actions">
+                            <button class="timeline-button">View Roadmap</button>
+                        </div>
+                    </div>
+                    <div class="timeline-dot" role="presentation" aria-hidden="true"></div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!--Timeline Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Timeline</h3>
+    <p>Timelines are useful for displaying chronological events. Here are some best practices to ensure accessibility:</p>
+    <ul>
+        <li>Semantic HTML: Use (ol) for chronological order, (ul) for non-linear timelines, and apply role="list", role="listitem", and role="presentation" where appropriate</li>
+        <li>Screen Reader Support: Include hidden text for visual elements (icons, status indicators), also ensure all interactive elements are focusable and operable, and maintain 4.5:1 contrast ratio for text and UI elements</li>
+        <li>Visual Hierarchy: Clearly distinguish past, present, and future events</li>
+        <li>Responsive Design: Adapt layout for mobile (often vertical stack) and desktop (often horizontal)</li>
+        <li>Focus States: Visible focus indicators for interactive elements, and ensure it is zoom compatible, can be zoomed in and works at 200% browser zoom</li>
+        <li>Voice Control Support: Provide voice navigation commands, announcements work for screen readers, and semantic markup that aid voice recognition</li>
+        <li>Cognitive Considerations: Clear temporal relationships, provide consistent visual patterns, and reduced cognitive load through organization</li>        
+    </ul>   
+    </div>
+</div>
+    </div>
+    </div>
+
+         <!-- Loading Spinner Component -->          
+      <div id="loading-spinner" class="component-content">
+        <div class="content-header"> 
+            <div class="load-content"></div>           
+          <h2>Loading Spinner</h2>
+            <p>Display loading spinner to users</p>
+        </div>
+        <div class="component-preview">    
+    <!-- ARIA Live Region for announcements -->
+<div id="loading-spinner-announcement" role="alert" aria-atomic="true" class="sr-only"></div>             
+        <button class="spin-button" id="loadButton">Simulate Loading</button>
+        <p>Press the button to see an accessible loading spinner in action.</p>
+    </div>
+
+    <div class="spinner-container" role="status" aria-live="polite" aria-hidden="true">
+        <div class="spinner" aria-hidden="true"></div>
+        <span class="sr-only">Loading content, please wait...</span>
+    </div>
+
+
+    <!--Loading Spinner Best practices-->
+<div class="component-code">
+    <h3>Best Practices for Loading Spinner</h3>
+    <p>Loading spinners are useful for indicating loading states. Here are some best practices to ensure accessibility:</p>
+    <h4>When & Where to Use Spinners</h4>    
+    <ul>
+        <li>Indicate system activity: Use spinners for processing tasks, such as API calls, content fetching, or form submissions</li>
+        <li>Avoid unnecessary spinners: If a page loads quickly (less than 1 second), skipping the spinner improves usability</li>
+        <li>Use for asynchronous operations: Background loading of elements benefits from subtle animation cues</li>
+        <li>Position smartly: Place the spinner near relevant content (e.g., inside a button for submission loading, or center-screen for page loads)</li>
+    </ul>
+    <h4>Duration & Timing</h4> 
+    <ul>
+        <li>Short tasks: For tasks under 1 second, consider using a progress bar instead of a spinner</li>       
+        <li>Fast response: If the loading time is under 2 seconds, use simple animations</li>
+        <li>Delayed spinner: If loading exceeds 500ms, introduce a spinner to signal activity (instant spinners sometimes feel broken)</li>
+        <li>Skeleton loaders for long delays: For delays exceeding 3 seconds, skeleton screens (gray placeholders) are preferable over spinners for better perceived performance</li>        
+    </ul> 
+    <h4>Accessibility Enhancements</h4> 
+    <ul>
+        <li>Screen reader support: Use aria-live="polite" to announce loading status, and role="status" for screen readers</li>
+        <li>Focus management: Ensure focus is not trapped in the spinner, and allow users to escape using the Escape key</li>
+        <li>Keyboard navigation: Ensure spinners are keyboard-navigable, and provide clear focus indicators</li>
+        <li>Color contrast: Maintain a minimum contrast ratio of 4.5:1 for text and background colours</li>
+        <li>Animation control: Provide options to pause or stop animations for users with motion sensitivity</li>
+        <li>Progressive enhancement: Ensure basic functionality without JavaScript, and provide fallbacks for older browsers</li>
+        <li>Test with real users: Ensure the spinner design is understandable and accessible to your target audience</li>
+    </ul>
+    <h4>Responsive Design Considerations</h4> 
+    <ul>
+        <li>Fluid layouts: Ensure spinners adapt to different screen sizes and orientations</li>
+        <li>Mobile-friendly: Use smaller, touch-friendly spinners for mobile devices</li>
+        <li>Orientation changes: Ensure spinners adjust correctly when the device orientation changes</li>
+        <li>Reduced motion mode: Provide a static alternative for users who prefer prefers-reduced-motion</li>
+    </ul>
+    </div>
+</div>
+    </div>
+    </div>
+            
+        <!-- Add more component content sections as needed -->
+    
+    </main>    
+
+</body>
+</html>
