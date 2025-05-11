@@ -1344,23 +1344,28 @@ function updateResults(filteredItems) {
         }
 
         // Initialize
-        function showSpinner() {
+        // Show spinner with auto-hide after delay
+function showSpinner() {
     const spinner = document.querySelector('.spinner-container');
     if (spinner) {
         spinner.classList.add('active');
+        
         // Announce loading to screen readers
         const announcement = document.getElementById('loading-spinner-announcement');
         if (announcement) {
             announcement.textContent = 'Content is loading, please wait...';
         }
+        
+        // Auto-hide after 3 seconds (safety measure)
+        setTimeout(hideSpinner, 3000);
     }
 }
 
+// Hide spinner function remains the same
 function hideSpinner() {
     const spinner = document.querySelector('.spinner-container');
     if (spinner) {
         spinner.classList.remove('active');
-        // Clear loading announcement
         const announcement = document.getElementById('loading-spinner-announcement');
         if (announcement) {
             announcement.textContent = '';
@@ -1368,11 +1373,9 @@ function hideSpinner() {
     }
 }
 
-// Example usage with your content loading
+// Update your showContent function
 function showContent(event, componentId) {
     event.preventDefault();
-    
-    // Show spinner
     showSpinner();
     
     // Hide current content
@@ -1380,28 +1383,25 @@ function showContent(event, componentId) {
         content.style.display = 'none';
     });
 
-    // Simulate loading delay (remove this in production)
+    // Simulate loading for demo (3 seconds max)
     setTimeout(() => {
-        // Show new content
         const content = document.getElementById(componentId);
         if (content) {
             content.style.display = 'block';
             content.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        // Update active link
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
         });
         event.currentTarget.classList.add('active');
         
-        // Hide spinner
-        hideSpinner();
-    }, 800); // Adjust this timeout as needed
+        hideSpinner(); // Ensure spinner hides after content loads
+    }, Math.min(3000, 800)); // Use either 800ms or 3s, whichever is shorter
 }
 
-// Add event listener for your demo button
+// Demo button handler (shows for exactly 3 seconds)
 document.getElementById('loadButton')?.addEventListener('click', function() {
     showSpinner();
-    setTimeout(hideSpinner, 2000); // Hide after 2 seconds for demo
+    setTimeout(hideSpinner, 3000); // Exactly 3 seconds for demo
 });
