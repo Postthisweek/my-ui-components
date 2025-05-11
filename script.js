@@ -1344,64 +1344,58 @@ function updateResults(filteredItems) {
         }
 
         // Initialize
-        // Show spinner with auto-hide after delay
-function showSpinner() {
-    const spinner = document.querySelector('.spinner-container');
-    if (spinner) {
-        spinner.classList.add('active');
-        
-        // Announce loading to screen readers
-        const announcement = document.getElementById('loading-spinner-announcement');
-        if (announcement) {
-            announcement.textContent = 'Content is loading, please wait...';
-        }
-        
-        // Auto-hide after 3 seconds (safety measure)
-        setTimeout(hideSpinner, 3000);
-    }
-}
-
-// Hide spinner function remains the same
-function hideSpinner() {
-    const spinner = document.querySelector('.spinner-container');
-    if (spinner) {
-        spinner.classList.remove('active');
-        const announcement = document.getElementById('loading-spinner-announcement');
-        if (announcement) {
-            announcement.textContent = '';
-        }
-    }
-}
-
-// Update your showContent function
+      // Remove spinner control from showContent()
 function showContent(event, componentId) {
     event.preventDefault();
-    showSpinner();
     
     // Hide current content
     document.querySelectorAll('.component-content, #default-content').forEach(content => {
         content.style.display = 'none';
     });
 
-    // Simulate loading for demo (3 seconds max)
-    setTimeout(() => {
-        const content = document.getElementById(componentId);
-        if (content) {
-            content.style.display = 'block';
-            content.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-        });
-        event.currentTarget.classList.add('active');
-        
-        hideSpinner(); // Ensure spinner hides after content loads
-    }, Math.min(3000, 800)); // Use either 800ms or 3s, whichever is shorter
+    // Show new content
+    const content = document.getElementById(componentId);
+    if (content) {
+        content.style.display = 'block';
+        content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // Update active link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
 }
 
-// Demo button handler (shows for exactly 3 seconds)
+// Spinner control functions (only for simulate button)
+function showSpinner() {
+    const spinner = document.querySelector('.spinner-container');
+    if (spinner) {
+        spinner.classList.add('active');
+        document.getElementById('loading-spinner-announcement').textContent = 
+            'Content is loading, please wait...';
+    }
+}
+
+function hideSpinner() {
+    const spinner = document.querySelector('.spinner-container');
+    if (spinner) {
+        spinner.classList.remove('active');
+        document.getElementById('loading-spinner-announcement').textContent = '';
+    }
+}
+
+// Only attach spinner to simulate button
 document.getElementById('loadButton')?.addEventListener('click', function() {
     showSpinner();
-    setTimeout(hideSpinner, 3000); // Exactly 3 seconds for demo
+    setTimeout(hideSpinner, 3000); // Hide after 3 seconds
+});
+
+// Keyboard support for simulate button
+document.getElementById('loadButton')?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        showSpinner();
+        setTimeout(hideSpinner, 3000);
+    }
 });
