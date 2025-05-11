@@ -1,4 +1,9 @@
 // Show the selected component content
+        function showContent(event, target) {
+    event.preventDefault(); // Prevent full page reload
+    window.location.hash = target; // Change URL without navigating away
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+}
         function showContent(event, componentId) {
             // Hide all component contents
             document.querySelectorAll('.component-content').forEach(content => {
