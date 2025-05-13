@@ -589,26 +589,28 @@
             <p>Allows users to search for content within the application.</p>
         </div>
         <div class="component-preview">
-            <h3>Search Input with Validation</h3>
-            <div class="search-input">
-                <form style="max-width: 300px; font-family: Arial, sans-serif;">
-                    <label for="search">Search the site:</label>
-                    <input type="search" id="search" name="search" 
-                        aria-describedby="search-instructions search-error" 
-                        placeholder="Type your query">
-                    <button class="btn" type="submit">Search</button>                    
-                    <p id="search-instructions">Type in your search query and press Enter or click the Search button.</p>
-                    <div id="search-error" class="error-message" aria-live="polite">
-                        Please enter a valid search term.
-                    </div>
-                </form>
-                <noscript>
-                    <p>Your browser does not support the search input field. Please enter text manually.</p>
-                    <label for="fallback-search">Enter search query:</label>
-                    <input type="text" id="fallback-search" name="fallback-search">
-                </noscript>                
+            <h2>Search Input with Validation</h2>
+            <section class="search-section" aria-labelledby="suggestions-search-heading">    
+    <div class="suggestions-search-container">
+            <h2 id="suggestions-search-heading">Search with Suggestions</h2>
+        <form class="search-form" role="search">
+            <label for="suggestions-search" class="search-label">Search with suggestions</label>
+            <div class="search-input-wrapper">
+                <input type="search" id="suggestions-search" class="search-input" 
+                       placeholder="Search with suggestions..." 
+                       aria-label="Search with suggestions"
+                       aria-autocomplete="list"
+                       aria-controls="suggestions-list">
+                <button type="button" class="clear-button" aria-label="Clear search">
+                    &times;
+                </button>
             </div>
-
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        <ul id="suggestions-list" class="suggestions-list" role="listbox"></ul>
+    </div>
+</section>        
+            </div>
         <div class="component-code">
         <h3>Best Practices for Search Input</h3>
         <p>Search inputs are essential for users to find content quickly. Here are some best practices to ensure accessibility:</p>
