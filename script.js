@@ -1399,3 +1399,176 @@ document.getElementById('loadButton')?.addEventListener('keydown', function(e) {
         setTimeout(hideSpinner, 3000);
     }
 });
+
+// Search input with suggestions functionality
+    const suggestionsSearch = document.getElementById('suggestions-search');
+    const suggestionsList = document.getElementById('suggestions-list');
+    const clearButton = document.querySelector('.clear-button');
+    let debounceTimer;
+    
+    // Sample data - in a real app this would come from an API
+    async function fetchSuggestions(query) {
+        return [
+            "HTML5 features",
+            "CSS Grid layout",
+            "JavaScript ES6+",
+            "Web accessibility",
+            "Responsive images",
+            "CSS Flexbox",
+            "JavaScript async/await",
+            "Web performance best practices",
+            "Progressive enhancement",
+            "Mobile-first design",
+            "Cross-browser compatibility",
+            "Frontend frameworks comparison",
+            "CSS preprocessors",
+            "JavaScript testing frameworks",
+            "Web security best practices",
+            "Accessibility guidelines",
+            "CSS best practices",
+            "JavaScript frameworks",
+            "HTML semantic elements",
+            "Responsive design patterns",
+            "Web performance optimization",
+            "Progressive Web Apps",
+            "Web Components",
+            "Frontend architecture",
+            "User experience design"];
+    }
+    
+    // Show/hide clear button based on input
+    suggestionsSearch.addEventListener('input', function() {
+        clearButton.style.display = this.value ? 'block' : 'none';
+    });
+    
+    // Clear search input
+    clearButton.addEventListener('click', function() {
+        suggestionsSearch.value = '';
+        suggestionsSearch.focus();
+        clearButton.style.display = 'none';
+        hideSuggestions();
+    });
+    
+    // Debounced search for suggestions
+    suggestionsSearch.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        
+        if (!this.value.trim()) {
+            hideSuggestions();
+            return;
+        }
+        
+        // Show loading indicator
+        const loadingIndicator = document.createElement('div');
+        loadingIndicator.className = 'loading-indicator';
+        this.parentNode.appendChild(loadingIndicator);
+        
+        debounceTimer = setTimeout(() => {
+            // Remove loading indicator
+            if (loadingIndicator.parentNode) {
+                loadingIndicator.parentNode.removeChild(loadingIndicator);
+            }
+            
+            getSuggestions(this.value.trim());
+        }, 300);
+    });
+    
+    // Handle keyboard navigation
+    suggestionsSearch.addEventListener('keydown', function(e) {
+        const items = suggestionsList.querySelectorAll('li');
+        if (!items.length) return;
+        
+        let currentItem = document.querySelector('.suggestions-list li[aria-selected="true"]');
+        
+        switch(e.key) {
+            case 'ArrowDown':
+                e.preventDefault();
+                if (!currentItem) {
+                    items[0].setAttribute('aria-selected', 'true');
+                } else {
+                    currentItem.setAttribute('aria-selected', 'false');
+                    if (currentItem.nextElementSibling) {
+                        currentItem.nextElementSibling.setAttribute('aria-selected', 'true');
+                    } else {
+                        items[0].setAttribute('aria-selected', 'true');
+                    }
+                }
+                break;
+            case 'ArrowUp':
+                e.preventDefault();
+                if (!currentItem) {
+                    items[items.length - 1].setAttribute('aria-selected', 'true');
+                } else {
+                    currentItem.setAttribute('aria-selected', 'false');
+                    if (currentItem.previousElementSibling) {
+                        currentItem.previousElementSibling.setAttribute('aria-selected', 'true');
+                    } else {
+                        items[items.length - 1].setAttribute('aria-selected', 'true');
+                    }
+                }
+                break;
+            case 'Enter':
+                if (currentItem) {
+                    e.preventDefault();
+                    this.value = currentItem.textContent;
+                    hideSuggestions();
+                    this.focus();
+                }
+                break;
+            case 'Escape':
+                hideSuggestions();
+                this.focus();
+                break;
+        }
+    });
+    
+    // Click outside to close suggestions
+    document.addEventListener('click', function(e) {
+        if (!suggestionsSearch.contains(e.target) && !suggestionsList.contains(e.target)) {
+            hideSuggestions();
+        }
+    });
+    
+    async function getSuggestions(query) {
+        try {
+            const suggestions = await fetchSuggestions(query);
+            const filtered = suggestions.filter(item =>
+                item.toLowerCase().includes(query.toLowerCase())
+            );
+            showSuggestions(filtered);
+        } catch (error) {
+            console.error('Error fetching suggestions:', error);
+            showSuggestions([]);
+        }
+    }
+    
+    function showSuggestions(suggestions) {
+        suggestionsList.innerHTML = '';
+        
+        if (suggestions.length === 0) {
+            const item = document.createElement('li');
+            item.textContent = 'No suggestions found';
+            item.style.color = '#999';
+            item.style.cursor = 'default';
+            suggestionsList.appendChild(item);
+        } else {
+            suggestions.forEach(suggestion => {
+                const item = document.createElement('li');
+                item.textContent = suggestion;
+                item.setAttribute('role', 'option');
+                item.addEventListener('click', function() {
+                    suggestionsSearch.value = suggestion;
+                    hideSuggestions();
+                    suggestionsSearch.focus();
+                });
+                suggestionsList.appendChild(item);
+            });
+        }
+        
+        suggestionsList.style.display = 'block';
+    }
+    
+    function hideSuggestions() {
+        suggestionsList.style.display = 'none';
+    }
+
