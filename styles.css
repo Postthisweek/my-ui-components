@@ -197,6 +197,32 @@ body {
             line-height: 1.5;
         }       
 
+/* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    .component-code {
+        padding: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.45;
+        margin-bottom: 1.5rem;
+        border-radius: calc(var(--border-radius) * 1);
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .component-code {
+        padding: 0.6rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 1.25rem;
+    }
+}
 
         /* Base styles (you already have these) */
 .btn {
@@ -536,6 +562,7 @@ body {
             opacity: 0.5;
             background-color: var(--border-color);
             cursor: not-allowed;
+               transform: scale(1.1);
         }
 
                 /* Experimental 3D radio effect */
@@ -3086,4 +3113,5 @@ hr {
             }
         }
     /* Stylesheet ends */
+
 
