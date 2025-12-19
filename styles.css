@@ -1,5 +1,5 @@
 /* Stylesheet starts */
-        :root {
+       :root {
             --primary-color: #4361ee;
             --dark-color: #2b2d42;
             --light-color: #f8f9fa;
@@ -130,9 +130,9 @@ body {
             background: rgba(255,255,255,0.1);
         }
 
-        .nav-link.active {           
-    background-color: #4361ee;
-    color: white;
+        .nav-link.active {
+            background: var(--primary-color);
+            font-weight: 500;
         }
 
         .nav-link i {
@@ -198,133 +198,219 @@ body {
         }       
 
 
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.2rem;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
+        /* Base styles (you already have these) */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
 
-        .btn-success {            
-            background: #038a22;
-            color: white;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            padding: 0.8rem 1.2rem;
-        }
+.btn-success {            
+    background: #038a22;
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+}
 
-        .btn-warning {
-            background: #ebb71c;
-            color: #0c0c0b;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            padding: 0.8rem 1.2rem;
-        }
+.btn-warning {
+    background: #ebb71c;
+    color: #0c0c0b;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+}
 
-        .btn-error {
-            background: #f46673;
-            color: #0c0c0b;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            padding: 0.8rem 1.2rem;
-        }
-        .btn-error:hover,
-        .btn-error:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-        .btn-warning:hover,
-        .btn-warning:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-        .btn-success:hover,
-        .btn-success:focus {
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-        .btn:focus,
-        .btn:hover {
-            background: var(--hover-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        } 
-        
-        .notification-show,
-        .notification-act,
-        .notification-persistent {
-            padding: 12px 24px; /* Adjusts spacing inside the button */
-            font-size: 16px; /* Ensures readability */
-            border: none;
-            border-radius: 6px; /* Adds rounded edges */
-            background-color: #007acc; /* Default color */
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
+.btn-error {
+    background: #f46673;
+    color: #0c0c0b;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+}
+.btn-error:hover,
+.btn-error:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+.btn-warning:hover,
+.btn-warning:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+.btn-success:hover,
+.btn-success:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+.btn:focus,
+.btn:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+} 
 
-        .notification-show:hover,
-        .notification-show:focus {
-            background-color: #005ea6; /* Darker shade for hover/focus */
-            outline: 3px solid #ffcc00; /* High-contrast outline for keyboard users */
-        }
-        .notification-act:hover,
-        .notification-act:focus {
-            background-color: #005ea6; /* Darker shade for hover/focus */
-            outline: 3px solid #ffcc00; /* High-contrast outline for keyboard users */
-        }
-        .notification-persistent:hover,
-        .notification-persistent:focus {
-        background-color: #005ea6; /* Darker shade for hover/focus */
-        outline: 3px solid #ffcc00; /* High-contrast outline for keyboard users */
-        }
+.notification-show,
+.notification-act,
+.notification-persistent {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
 
+.notification-show:hover,
+.notification-show:focus {
+    background-color: #005ea6;
+    outline: 3px solid #ffcc00;
+}
+.notification-act:hover,
+.notification-act:focus {
+    background-color: #005ea6;
+    outline: 3px solid #ffcc00;
+}
+.notification-persistent:hover,
+.notification-persistent:focus {
+    background-color: #005ea6;
+    outline: 3px solid #ffcc00;
+}
 
-        .btn.disabled-btn {
-            background: #e0e0e0;
-            color: #a0a0a0;
-            cursor: not-allowed;
-        }      
+.btn.disabled-btn {
+    background: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Example: for screens 600px wide and below */
+@media (max-width: 600px) {
+
+    .btn,
+    .btn-success,
+    .btn-warning,
+    .btn-error,
+    .notification-show,
+    .notification-act,
+    .notification-persistent {
+        display: block;          /* stack buttons vertically */
+        width: 100%;             /* full-width buttons */
+        box-sizing: border-box;  /* include padding in width */
+        font-size: 0.9rem;       /* slightly smaller font for small screens */
+        padding: 0.7rem 1rem;    /* tighten padding a bit */
+        margin-bottom: 0.5rem;   /* space between stacked buttons */
+    }
+
+    /* Optional: reduce hover lift on touch devices */
+    .btn:hover,
+    .btn:focus,
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-warning:hover,
+    .btn-warning:focus,
+    .btn-error:hover,
+    .btn-error:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+}
+
+/* Optional: extra-narrow screens (e.g. 360px and below) */
+@media (max-width: 360px) {
+
+    .btn,
+    .btn-success,
+    .btn-warning,
+    .btn-error,
+    .notification-show,
+    .notification-act,
+    .notification-persistent {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+}    
          
         
-        .date-picker {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
+        /* ========================= */
+/* Base styles (yours)       */
+/* ========================= */
 
-        .date-picker input {
-            padding: 0.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            width: 100%;
-            max-width: 200px;
-            margin-right: 1rem;
-        }
+.date-picker {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
 
-        .date-picker input:focus {
-            border-color: var(--primary-color);
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
-        .date-picker input:hover {
-            border-color: var(--primary-color);
-            outline: 2px solid var(--primary-color);
-            outline-offset: 2px;
-        }
+.date-picker input {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 200px;
+    margin-right: 1rem;
+}
+
+.date-picker input:focus {
+    border-color: var(--primary-color);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.date-picker input:hover {
+    border-color: var(--primary-color);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    .date-picker {
+        flex-direction: column;     /* stack vertically */
+        align-items: flex-start;    /* align to left */
+        gap: 0.75rem;               /* spacing between elements */
+    }
+
+    .date-picker input {
+        max-width: 100%;            /* full width on mobile */
+        margin-right: 0;            /* remove horizontal spacing */
+        padding: 0.6rem;            /* slightly larger tap target */
+        font-size: 0.95rem;         /* improve readability */
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .date-picker input {
+        padding: 0.55rem;
+        font-size: 0.9rem;
+    }
+}
 
 
         h2, h3 {
@@ -474,166 +560,156 @@ body {
             100% { box-shadow: 0 0 0 0 rgba(74, 107, 223, 0); }
         }
 
+        /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Make fieldset breathe better on small screens */
+    fieldset {
+        padding: 0.75rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    /* Stack radio options vertically with better spacing */
+    .radio-option {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        min-height: 48px; /* larger tap target */
+    }
+
+    /* Increase tap target size slightly */
+    .radio-custom {
+        width: 1.4rem;
+        height: 1.4rem;
+        min-width: 1.4rem;
+        margin-right: 0.75rem;
+    }
+
+    /* Improve readability on small screens */
+    .radio-label {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .radio-description {
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Horizontal layout becomes vertical on mobile */
+    .radio-group.horizontal .radio-options {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .radio-group.horizontal .radio-option {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .radio-custom {
+        width: 1.3rem;
+        height: 1.3rem;
+        min-width: 1.3rem;
+    }
+
+    .radio-label {
+        font-size: 0.9rem;
+    }
+
+    .radio-description {
+        font-size: 0.8rem;
+    }
+}
+
        /* Search input styling starts */
         
-                  .search-section {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 30px;
-        }
-        
-        /* Basic Search Styles */
-        .search-form {
-            display: flex;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .search-label {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        .search-input {
-            flex: 1;
-            padding: 12px 15px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius) 0 0 var(--border-radius);
-            outline: none;
-            transition: border-color 0.3s;
-        }
-        
-        .search-input:focus {
+           .search-input {                               
+                width: 100%;
+                max-width: 400px;
+                padding: 0.5rem;
+                border: 1px solid var(--border-color);
+                border-radius: var(--border-radius);
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+    
+            input::placeholder {
+                color: var(--text-light);
+            }            
+        input:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
-        }
-        
-        .search-button {
-            padding: 12px 20px;
-            background-color: #075ae4;
-            color: white;
-            border: none;
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        
-        .search-button:hover {
-            background-color: #3367d6;
-        }
-        
-        .search-button:focus {
-            outline: 2px solid #1a237e;
+            outline: 2px solid var(--primary-color);
             outline-offset: 2px;
         }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .search-form {
-                flex-direction: column;
-            }
-            
-            .search-input {
-                border-radius: var(--border-radius);
-                margin-bottom: 10px;
-            }
-            
-            .search-button {
-                border-radius: var(--border-radius);
-                width: 100%;
-            }
+        input:hover {
+            border-color: var(--primary-color);
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
+       input[type="search"] {
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            width: 100%;
+            max-width: 400px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s ease, outline 0.3s ease;            
+       }    
 
-        
-    /* Suggestions Search Styles */
-    .suggestions-search-container {
-        position: relative;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .search-input-wrapper {
-        position: relative;
-        flex: 1;
-    }
-    
-    .clear-button {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        color: #999;
-        padding: 0 5px;
-        display: none;
-    }
-    
-    .clear-button:hover {
-        color: #666;
-    }
-    
-    .suggestions-list {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        max-height: 300px;
-        overflow-y: auto;
-        background: white;
-        border: 1px solid #ddd;
-        border-top: none;
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        list-style: none;
-        display: none;
-        z-index: 100;
-        box-shadow: var(--box-shadow);
-    }
-    
-    .suggestions-list li {
-        padding: 10px 15px;
-        cursor: pointer;
-    }
-    
-    .suggestions-list li:hover,
-    .suggestions-list li[aria-selected="true"] {
-        background-color: #f0f0f0;
-    }
-    
-    /* Loading indicator */
-    .loading-indicator {
-        display: none;
-        position: absolute;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        border: 2px solid #f3f3f3;
-        border-top: 2px solid var(--primary-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-    }
-    
-    @keyframes spin {
-        0% { transform: translateY(-50%) rotate(0deg); }
-        100% { transform: translateY(-50%) rotate(360deg); }
+       /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    .search-input,
+    input[type="search"] {
+        max-width: 100%;          /* full width on mobile */
+        padding: 0.75rem;         /* larger tap target */
+        font-size: 0.95rem;       /* slightly smaller for small screens */
+        margin-bottom: 1rem;      /* consistent spacing */
     }
 
-               .notification-container {
+    /* Improve placeholder readability on small screens */
+    input::placeholder {
+        font-size: 0.9rem;
+    }
+
+    /* Reduce outline intensity for small screens */
+    input:focus,
+    input:hover {
+        outline-offset: 1px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .search-input,
+    input[type="search"] {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
+
+    input::placeholder {
+        font-size: 0.85rem;
+    }
+}
+
+        .notification-container {
             position: fixed;
             top: var(--spacing);
             right: var(--spacing);
@@ -863,6 +939,103 @@ body {
             animation: slideOut var(--animation-duration) ease-in forwards;
         }
 
+        /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Move notifications to bottom-left for easier thumb reach */
+    .notification-container {
+        top: auto;
+        bottom: var(--spacing);
+        right: var(--spacing);
+        left: var(--spacing);
+        width: auto;
+        max-width: 100%;
+        gap: calc(var(--spacing) * 0.75);
+    }
+
+    /* Make notifications full-width and more readable */
+    .notification {
+        padding: calc(var(--spacing) * 0.6);
+        border-radius: calc(var(--border-radius) * 1);
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: 0.95rem;
+    }
+
+    /* Icon scales slightly down */
+    .notification-icon {
+        font-size: 1.3rem;
+        margin-right: calc(var(--spacing) * 0.5);
+    }
+
+    /* Title and message scale for small screens */
+    .notification-title {
+        font-size: 1rem;
+        margin-bottom: calc(var(--spacing) * 0.2);
+    }
+
+    .notification-message {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    /* Actions stack if needed */
+    .notification-actions {
+        flex-wrap: wrap;
+        gap: calc(var(--spacing) * 0.4);
+        margin-top: calc(var(--spacing) * 0.4);
+    }
+
+    .notification-action {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.45rem;
+    }
+
+    /* Close button becomes slightly smaller */
+    .notification-close {
+        font-size: 1rem;
+        padding: 0.2rem;
+        margin-left: calc(var(--spacing) * 0.5);
+    }
+
+    /* Progress bar height reduced for compact layout */
+    .notification-progress {
+        height: 3px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .notification {
+        padding: calc(var(--spacing) * 0.5);
+    }
+
+    .notification-icon {
+        font-size: 1.2rem;
+    }
+
+    .notification-title {
+        font-size: 0.95rem;
+    }
+
+    .notification-message {
+        font-size: 0.8rem;
+    }
+
+    .notification-action {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .notification-close {
+        font-size: 0.9rem;
+    }
+}
 
                 /* Demo controls */
         .demo-controls {
@@ -955,6 +1128,109 @@ body {
             outline: 2px solid blue;
             color: #000;
         }
+
+      /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Demo controls container */
+    .demo-controls {
+        padding: 1.25rem;
+        max-width: 100%;
+        border-radius: calc(var(--border-radius) * 1);
+    }
+
+    /* Control groups become more compact */
+    .control-group {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Settings panel */
+    .settings {
+        padding: 0.75rem;
+        margin-top: 1rem;
+        border-radius: calc(var(--border-radius) * 1);
+    }
+
+    .settings label {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .settings input[type="range"] {
+        margin-bottom: 0.75rem;
+    }
+
+    .settings-group {
+        margin-bottom: 0.75rem;
+    }
+
+    /* Error summary */
+    #errorSummary {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .error-message {
+        font-size: 0.9rem;
+    }
+
+    #statusMessage {
+        font-size: 0.95rem;
+    }
+
+    /* Status dialog */
+    #statusDialog {
+        width: 90%;
+        max-width: 320px;
+        top: 25%;
+        padding: 0.75rem;
+        border-radius: 6px;
+        transform: translate(-50%, -25%);
+    }
+
+    .dialog-content {
+        font-size: 0.95rem;
+    }
+
+    /* Close button */
+    #closeDialog {
+        font-size: 1.25rem;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .demo-controls {
+        padding: 1rem;
+    }
+
+    .control-group {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
+
+    .settings {
+        padding: 0.65rem;
+    }
+
+    #statusDialog {
+        width: 92%;
+        padding: 0.65rem;
+    }
+
+    #closeDialog {
+        font-size: 1.1rem;
+    }
+}
 
         /* Accordion styles */
         .accordion {
@@ -1054,6 +1330,95 @@ body {
             padding: 20px;
         }
 
+      /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Accordion container spacing */
+    .accordion {
+        margin: 0.75em 0;
+    }
+
+    .accordion-item {
+        margin-bottom: 0.75em;
+    }
+
+    /* Accordion headers */
+    .btn-head1,
+    .btn-head2 {
+        padding: 0.65em 0.85em;
+        font-size: 1.05em;
+    }
+
+    /* Accordion content */
+    div[role="region"] {
+        padding: 0.5em 0.75em;
+    }
+
+    div[role="region"] > div {
+        margin-left: 0.5em;
+    }
+
+    div[role="region"] > div > p {
+        font-size: 0.9em;
+        line-height: 1.35;
+    }
+
+    /* Tabs container */
+    .tab-container {
+        padding: 0 10px;
+        margin: 20px auto;
+    }
+
+    /* Tab navigation becomes scrollable on small screens */
+    .tab-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0.5rem;
+    }
+
+    .tab-button {
+        padding: 8px 14px;
+        font-size: 0.95rem;
+        flex-shrink: 0; /* prevents squishing */
+    }
+
+    /* Tab content spacing */
+    .tab-content {
+        padding: 15px 0;
+    }
+
+    /* Content section */
+    .content-section {
+        padding: 15px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .btn-head1,
+    .btn-head2 {
+        padding: 0.55em 0.75em;
+        font-size: 1em;
+    }
+
+    div[role="region"] > div > p {
+        font-size: 0.85em;
+    }
+
+    .tab-button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        padding: 12px;
+    }
+}
 
         /* Modal backdrop */
         .modal-backdrop {
@@ -1165,6 +1530,99 @@ body {
             color: #6c757d;
             border: 1px solid transparent;
         }
+
+     /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Backdrop stays full-screen but ensures safe spacing */
+    .modal-backdrop {
+        padding: 1rem;
+        align-items: flex-start; /* modal appears slightly lower for thumb reach */
+    }
+
+    /* Modal dialog */
+    .modal {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 6px;
+        margin-top: 2rem; /* prevents modal from touching top edge */
+        max-height: 85vh;
+    }
+
+    /* Modal header */
+    .modal-header {
+        padding: 12px 16px;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-close {
+        font-size: 1.3rem;
+        padding: 0 6px;
+    }
+
+    /* Modal body */
+    .modal-body {
+        padding: 16px;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    /* Modal footer */
+    .modal-footer {
+        padding: 12px 16px;
+        gap: 8px;
+        flex-wrap: wrap; /* buttons wrap instead of squeezing */
+    }
+
+    /* Buttons */
+    button {
+        padding: 7px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .modal {
+        margin-top: 1.5rem;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        padding: 10px 14px;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .modal-body {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .modal-footer {
+        padding: 10px 14px;
+        gap: 6px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .modal-close {
+        font-size: 1.2rem;
+    }
+}
 
         /* Demo content styles */
         .demo-content {
@@ -1493,8 +1951,7 @@ body {
             }
         }
 
-        /* Pagination styles */
-
+       
         /* Pagination container */
         .pagination-container {
             margin: 40px 0;
@@ -1613,7 +2070,67 @@ body {
             font-weight: 500;
         }
 
-        /* Filters Styles */
+        /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Breadcrumb container spacing */
+    .breadcrumb {
+        padding: 10px 0;
+    }
+
+    /* Breadcrumb list becomes more compact */
+    .breadcrumb-list {
+        padding: 0 12px;
+        gap: 4px; /* gentle spacing between items */
+    }
+
+    /* Breadcrumb items stack more naturally */
+    .breadcrumb-item {
+        font-size: 0.9rem;
+    }
+
+    /* Slash separator spacing tightens */
+    .breadcrumb-item:not(:last-child)::after {
+        margin: 0 6px;
+        font-size: 0.9rem;
+    }
+
+    /* Links scale slightly for readability */
+    .breadcrumb-link {
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb-link[aria-current="page"] {
+        font-size: 0.92rem;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .breadcrumb-list {
+        padding: 0 10px;
+    }
+
+    .breadcrumb-item {
+        font-size: 0.85rem;
+    }
+
+    .breadcrumb-item:not(:last-child)::after {
+        margin: 0 5px;
+        font-size: 0.85rem;
+    }
+
+    .breadcrumb-link,
+    .breadcrumb-link[aria-current="page"] {
+        font-size: 0.85rem;
+    }
+}
+
         /* General form styling */
         #filter-form {
             max-width: 600px;
@@ -1737,20 +2254,7 @@ body {
         .data-table tr:last-child td {
             border-bottom: none;
         }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .sort-controls {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .data-table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
-        
+                        
         .sort-select {
         padding: 8px 16px;
         border: 1px solid var(--border-color);
@@ -1794,7 +2298,92 @@ body {
         100% { transform: rotate(360deg); }
         }
 
-        /* Layouts Styles */
+      /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Sort section container */
+    .sort-section {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: calc(var(--border-radius) * 1);
+    }
+
+    /* Sort controls stack more naturally */
+    .sort-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .sort-label {
+        margin-right: 0;
+        font-size: 0.95rem;
+    }
+
+    /* Sort buttons become full-width if needed */
+    .sort-button {
+        padding: 7px 14px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sort-icon {
+        font-size: 11px;
+    }
+
+    /* Sort dropdown */
+    .sort-select {
+        min-width: 100%;
+        padding: 7px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* Data table becomes scrollable horizontally */
+    .data-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: var(--border-radius);
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .sort-section {
+        padding: 16px;
+    }
+
+    .sort-button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .sort-select {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+     /* Layouts Styles */
         .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1857,6 +2446,63 @@ tr {
     }
 }
 
+/* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Grid container becomes 2 columns on small screens */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    /* Grid items scale down slightly */
+    .grid-item {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    /* Score table becomes horizontally scrollable */
+    .score-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 6px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    tr {
+        animation-duration: 0.5s; /* slightly faster on mobile */
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    /* Grid becomes single-column for ultra-small screens */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    .grid-item {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 7px;
+        font-size: 0.85rem;
+    }
+}
+
 /* Style for buttons */
 button {
     background-color: #0078D4;
@@ -1873,18 +2519,7 @@ hr {
     margin: 20px 0;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .grid-item {
-        padding: 10px;
-    }
-    th, td {
-        padding: 5px;
-    }
-}
+
 /* Accessibility styles */
 .accessible-text {
     font-size: 18px;
@@ -2000,17 +2635,93 @@ hr {
             border: 0;
         }
         
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .tags-container {
-                padding: 8px;
-            }
-            
-            .tag {
-                font-size: 13px;
-                padding: 4px 8px;
-            }
-        }
+        /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Tags section container */
+    .tags-section {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: calc(var(--border-radius) * 1);
+    }
+
+    /* Tags container becomes more compact */
+    .tags-container {
+        padding: 8px;
+        gap: 6px;
+        min-height: 45px;
+    }
+
+    /* Tags list spacing tightens */
+    .tags-list {
+        gap: 6px;
+    }
+
+    /* Individual tag scales down slightly */
+    .tag {
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+
+    .tag[data-invalid] {
+        font-size: 13px;
+    }
+
+    /* Remove button becomes smaller but still tappable */
+    .tag-remove {
+        font-size: 14px;
+        margin-left: 4px;
+        padding: 0 2px;
+    }
+
+    /* Tag input expands naturally on mobile */
+    .tag-input {
+        min-width: 80px;
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    /* Instructions scale down */
+    .tag-instructions {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .tags-section {
+        padding: 16px;
+    }
+
+    .tags-container {
+        padding: 6px;
+        gap: 5px;
+    }
+
+    .tag {
+        padding: 3px 7px;
+        font-size: 12.5px;
+    }
+
+    .tag-remove {
+        font-size: 13px;
+    }
+
+    .tag-input {
+        padding: 5px;
+        font-size: 12.5px;
+    }
+
+    .tag-instructions {
+        font-size: 13px;
+    }
+}
 
         /* Timeline styles */
         .line-container {
@@ -2143,27 +2854,7 @@ hr {
             outline: 2px solid #1a237e;
             outline-offset: 2px;
         }
-        
-        /* Responsive Timeline */
-        @media (max-width: 768px) {
-            .timeline-line {
-                left: var(--dot-size);
-            }
-            
-            .timeline-item,
-            .timeline-item:nth-child(odd) {
-                width: 100%;
-                padding-left: 60px;
-                padding-right: 0;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-dot,
-            .timeline-dot {
-                left: calc(var(--dot-size) - var(--dot-size) / 2);
-                right: auto;
-            }
-        }
-        
+                        
         /* ARIA Live Region */
         .aria-live-region2 {
             position: absolute;
@@ -2183,6 +2874,109 @@ hr {
             outline-offset: 2px;
         }
 
+     /* ========================= */
+/* Mobile adjustments        */
+/* ========================= */
+
+/* Phones and small devices (≤ 600px) */
+@media (max-width: 600px) {
+
+    /* Container spacing */
+    .line-container {
+        padding: 15px;
+    }
+
+    .timeline-container {
+        padding: 20px 0;
+    }
+
+    /* Timeline line moves to the left for a vertical layout */
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    /* Timeline items become full-width stacked */
+    .timeline-item {
+        width: 100%;
+        margin: 30px 0;
+        padding: 0 0 0 50px; /* space for line + dot */
+        justify-content: flex-start !important;
+    }
+
+    /* Remove alternating left/right behavior */
+    .timeline-item:nth-child(odd) {
+        padding-left: 50px;
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+
+    /* Timeline content becomes full-width */
+    .timeline-content {
+        width: 100%;
+        padding: calc(var(--card-padding) * 0.9);
+        font-size: 0.95rem;
+    }
+
+    /* Timeline dot aligns left for all items */
+    .timeline-dot {
+        left: 20px;
+        right: auto;
+    }
+
+    /* Date, title, description scale slightly */
+    .timeline-date {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .timeline-title {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    /* Actions wrap on small screens */
+    .timeline-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .timeline-button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Extra-small screens (≤ 360px) */
+@media (max-width: 360px) {
+
+    .timeline-item {
+        padding-left: 45px;
+    }
+
+    .timeline-dot {
+        left: 15px;
+    }
+
+    .timeline-content {
+        padding: calc(var(--card-padding) * 0.8);
+        font-size: 0.9rem;
+    }
+
+    .timeline-title {
+        font-size: 1rem;
+    }
+
+    .timeline-button {
+        padding: 4px 8px;
+        font-size: 12.5px;
+    }
+}
 
         /* Loading Spinner styles */
         .spinner-container {
@@ -2199,13 +2993,11 @@ hr {
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
-            pointer-events: none; /* Allows clicking through when hidden */
         }
 
         .spinner-container.active {
             opacity: 1;
             visibility: visible;
-            pointer-events: auto; /* Block interactions when visible */
         }
 
         .spinner {
@@ -2215,7 +3007,6 @@ hr {
             border-top: 5px solid #3498db;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            transition: transform 0.2s ease-out; /* Smoother spin appearance */
         }
 
         /* Reduced motion preference */
@@ -2295,3 +3086,4 @@ hr {
             }
         }
     /* Stylesheet ends */
+
